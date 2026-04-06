@@ -1,11 +1,1007 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=Cat%C3%A1logo%20-%20Rafael%20Salomon%20-%202026.html">
-  <title>Rafael Salomon — Nutricionista</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rafael Salomon, nutricionista em Brasília. Emagrecimento, performance e condições clínicas com método real. Sem promessa milagrosa, sem plano genérico." />
+  <meta property="og:title" content="Rafael Salomon | Nutricionista" />
+  <meta property="og:description" content="Se você já tentou de tudo e o resultado não vem, o problema provavelmente não é você. É a estratégia." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#042A2B" />
+  <title>Rafael Salomon | Nutricionista</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rafael Salomon",
+    "jobTitle": "Nutricionista clínico e esportivo",
+    "telephone": "+55-61-99566-2828",
+    "address": {"@type": "PostalAddress", "addressLocality": "Brasília", "addressCountry": "BR"},
+    "sameAs": ["https://instagram.com/rafaelsalomon.nutri"]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:       #040f10;
+      --bg2:      #071518;
+      --panel:    rgba(6,20,22,0.92);
+      --teal:     #0D3B40;
+      --aqua:     #72D0C5;
+      --aqua2:    #4ab8ab;
+      --white:    #f0f6f6;
+      --muted:    #8fb8b5;
+      --line:     rgba(114,208,197,0.12);
+      --line2:    rgba(114,208,197,0.28);
+      --wapp:     #25d366;
+      --r:        16px;
+      --max:      1100px;
+      --shadow:   0 24px 64px rgba(0,0,0,0.45);
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width:100%; display:block; }
+
+    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(4,15,16,0.82);
+      border-bottom: 1px solid var(--line);
+    }
+    .hdr {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+      min-height: 72px;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    }
+    .logo { display:flex; flex-direction:column; gap:1px; }
+    .logo-name { font-family:'Outfit',sans-serif; font-weight:800; font-size:1.1rem; letter-spacing:-0.02em; color:#fff; }
+    .logo-sub  { font-size:0.78rem; color:var(--muted); font-weight:300; }
+    .nav { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+    .nav a {
+      padding: 8px 14px; border-radius: 10px;
+      border: 1px solid var(--line); color: var(--muted);
+      font-size: 0.88rem; font-weight: 500;
+      transition: .2s ease;
+    }
+    .nav a:hover { color:#fff; border-color:var(--line2); background:rgba(114,208,197,0.06); }
+    .nav .cta-nav {
+      background: var(--wapp); color:#031a0e; border-color:var(--wapp);
+      font-weight:700;
+    }
+    .nav .cta-nav:hover { background:#1fb357; border-color:#1fb357; transform:translateY(-1px); }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      min-height:50px; padding:0 22px; border-radius:12px;
+      font-family:'Nunito Sans',sans-serif; font-weight:700; font-size:0.95rem;
+      border:1px solid transparent; cursor:pointer; transition:.22s ease;
+    }
+    .btn-w  { background:var(--wapp); color:#031a0e; box-shadow:0 12px 28px rgba(37,211,102,.22); }
+    .btn-w:hover  { transform:translateY(-2px); box-shadow:0 16px 36px rgba(37,211,102,.3); }
+    .btn-a  { background:linear-gradient(135deg,var(--aqua),var(--aqua2)); color:#042A2B; box-shadow:0 12px 28px rgba(114,208,197,.2); }
+    .btn-a:hover  { transform:translateY(-2px); box-shadow:0 16px 36px rgba(114,208,197,.28); }
+    .btn-o  { background:transparent; color:var(--white); border-color:var(--line2); }
+    .btn-o:hover  { background:rgba(114,208,197,.06); border-color:var(--aqua); transform:translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero { padding: 80px 0 60px; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px; align-items: start;
+    }
+    .hero-main {
+      background: linear-gradient(160deg, rgba(13,59,64,.6) 0%, rgba(4,15,16,.9) 100%);
+      border: 1px solid var(--line); border-radius: 24px;
+      padding: 40px; box-shadow: var(--shadow);
+    }
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 7px 14px; border-radius:999px;
+      border: 1px solid var(--line2);
+      background: rgba(114,208,197,.07);
+      color: var(--aqua); font-size:0.82rem; font-weight:600;
+      text-transform:uppercase; letter-spacing:.06em;
+      margin-bottom: 22px;
+    }
+    .hero-h1 {
+      font-family:'Outfit',sans-serif; font-weight:800;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      line-height: 1.06; letter-spacing: -0.04em;
+      color: #fff; margin-bottom: 20px;
+    }
+    .hero-h1 em { color:var(--aqua); font-style:normal; }
+    .hero-desc {
+      color: var(--muted); font-size:1.05rem; line-height:1.8;
+      margin-bottom: 30px; max-width: 600px;
+    }
+    .hero-desc strong { color: var(--white); font-weight:500; }
+    .hero-btns { display:flex; flex-wrap:wrap; gap:12px; }
+
+    .hero-aside {
+      display:grid; gap:16px; align-content:start;
+    }
+    .aside-card {
+      background: rgba(6,20,22,.88);
+      border: 1px solid var(--line); border-radius: 20px;
+      padding: 22px; box-shadow: var(--shadow);
+      transition: .22s ease;
+    }
+    .aside-card:hover { border-color:var(--line2); transform:translateY(-2px); }
+    .aside-icon {
+      width:40px; height:40px; border-radius:10px;
+      background:rgba(114,208,197,.1);
+      display:flex; align-items:center; justify-content:center;
+      margin-bottom:12px;
+    }
+    .aside-icon svg { width:20px; height:20px; stroke:var(--aqua); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+    .aside-card h3 { font-family:'Outfit',sans-serif; font-size:1rem; font-weight:700; margin-bottom:6px; color:#fff; }
+    .aside-card p  { font-size:0.93rem; color:var(--muted); line-height:1.65; }
+
+    /* ── SECTION BASE ── */
+    .sec { padding: 72px 0; }
+    .sec-tag {
+      display:inline-block; padding:5px 14px; border-radius:999px;
+      background:rgba(114,208,197,.08); border:1px solid var(--line2);
+      color:var(--aqua); font-size:0.78rem; font-weight:600;
+      text-transform:uppercase; letter-spacing:.06em; margin-bottom:14px;
+    }
+    .sec-h {
+      font-family:'Outfit',sans-serif; font-weight:800;
+      font-size: clamp(1.7rem,3.5vw,2.5rem);
+      line-height:1.1; letter-spacing:-0.03em;
+      color:#fff; margin-bottom:14px;
+      padding-left:16px; border-left:3px solid var(--aqua);
+    }
+    .sec-lead {
+      color:var(--muted); font-size:1.04rem; line-height:1.8;
+      max-width:740px; margin-bottom:36px;
+    }
+
+    /* ── 3-col cards ── */
+    .g3 { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .g2 { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+    .card {
+      background:linear-gradient(160deg,rgba(13,59,64,.3),rgba(4,15,16,.9));
+      border:1px solid var(--line); border-radius:var(--r);
+      padding:24px; box-shadow:var(--shadow); transition:.22s ease;
+    }
+    .card:hover { border-color:var(--line2); transform:translateY(-3px); }
+    .card-ico {
+      width:44px; height:44px; border-radius:12px;
+      background:rgba(114,208,197,.1);
+      display:flex; align-items:center; justify-content:center;
+      margin-bottom:14px;
+    }
+    .card-ico svg { width:22px; height:22px; stroke:var(--aqua); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+    .card h3 { font-family:'Outfit',sans-serif; font-size:1.08rem; font-weight:700; margin-bottom:8px; color:#fff; }
+    .card p  { color:var(--muted); font-size:0.96rem; line-height:1.7; }
+
+    /* ── CICLO ── */
+    .cycle { display:grid; grid-template-columns:repeat(7,1fr); gap:10px; margin-top:28px; }
+    .cy {
+      background:rgba(6,20,22,.9); border:1px solid var(--line);
+      border-radius:14px; padding:16px 12px; text-align:center;
+    }
+    .cy-n {
+      width:32px; height:32px; border-radius:999px; margin:0 auto 10px;
+      background:rgba(114,208,197,.1); border:1px solid var(--line2);
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Outfit',sans-serif; font-weight:800; font-size:.85rem; color:var(--aqua);
+    }
+    .cy h4 { font-size:.88rem; font-weight:700; color:#fff; margin-bottom:4px; line-height:1.2; }
+    .cy p  { font-size:.8rem; color:var(--muted); line-height:1.5; }
+    .callout {
+      margin-top:22px;
+      background:linear-gradient(135deg,rgba(13,59,64,.5),rgba(4,15,16,.8));
+      border:1px solid rgba(114,208,197,.22); border-radius:var(--r);
+      padding:22px 24px; font-size:.97rem; color:var(--muted); line-height:1.75;
+    }
+    .callout strong { color:var(--aqua); }
+
+    /* ── ABOUT ── */
+    .about-box {
+      background:linear-gradient(160deg,rgba(13,59,64,.35),rgba(4,15,16,.95));
+      border:1px solid var(--line); border-radius:24px;
+      padding:36px; box-shadow:var(--shadow);
+    }
+    .about-grid { display:grid; grid-template-columns:300px 1fr; gap:28px; align-items:start; margin-top:24px; }
+    .photo-box {
+      border-radius:20px; overflow:hidden; border:1px solid var(--line);
+      background:linear-gradient(160deg,rgba(13,59,64,.6),rgba(4,15,16,1));
+      min-height:380px; display:flex; align-items:center; justify-content:center;
+    }
+    .photo-box img { width:100%; height:100%; min-height:380px; object-fit:cover; object-position:top center; }
+    .photo-fb { font-family:'Outfit',sans-serif; font-weight:800; font-size:3.5rem; color:var(--aqua); letter-spacing:-.06em; }
+    .about-text p { color:var(--muted); font-size:1rem; line-height:1.82; margin-bottom:16px; }
+    .about-text strong { color:var(--white); font-weight:500; }
+    .vals { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:8px; }
+    .val {
+      padding:16px; border:1px solid var(--line); border-radius:14px;
+      background:rgba(114,208,197,.03);
+    }
+    .val h4 { font-family:'Outfit',sans-serif; font-size:.95rem; font-weight:700; color:#fff; margin-bottom:6px; }
+    .val p  { color:var(--muted); font-size:.9rem; line-height:1.6; margin:0; }
+
+    /* ── PROCESS ── */
+    .proc { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .ps {
+      background:linear-gradient(160deg,rgba(13,59,64,.3),rgba(4,15,16,.9));
+      border:1px solid var(--line); border-radius:var(--r);
+      padding:22px; box-shadow:var(--shadow);
+    }
+    .ps-n {
+      width:38px; height:38px; border-radius:999px; margin-bottom:12px;
+      background:rgba(114,208,197,.08); border:1px solid var(--line2);
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Outfit',sans-serif; font-weight:800; color:var(--aqua);
+    }
+    .ps h3 { font-family:'Outfit',sans-serif; font-size:.98rem; font-weight:700; color:#fff; margin-bottom:6px; }
+    .ps p  { color:var(--muted); font-size:.92rem; line-height:1.65; }
+
+    /* ── PLANS ── */
+    .plans { display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:860px; margin:28px auto 0; }
+    .plan {
+      position:relative; overflow:hidden;
+      background:linear-gradient(160deg,rgba(13,59,64,.4),rgba(4,15,16,.98));
+      border:1px solid var(--line); border-radius:22px;
+      padding:28px; box-shadow:var(--shadow);
+      display:flex; flex-direction:column;
+    }
+    .plan::before {
+      content:''; position:absolute; inset:0 0 auto 0; height:3px;
+      background:linear-gradient(90deg,var(--aqua),var(--aqua2));
+    }
+    .plan.hl { border-color:rgba(114,208,197,.32); transform:translateY(-4px); }
+    .plan-badge {
+      align-self:flex-start; margin-bottom:14px;
+      padding:6px 12px; border-radius:999px;
+      background:linear-gradient(135deg,var(--aqua),var(--aqua2));
+      color:#042A2B; font-size:.75rem; font-weight:800;
+      text-transform:uppercase; letter-spacing:.04em;
+    }
+    .plan h3 { font-family:'Outfit',sans-serif; font-size:1.3rem; font-weight:800; color:#fff; margin-bottom:6px; }
+    .plan-sub { color:var(--muted); font-size:.93rem; margin-bottom:16px; line-height:1.5; }
+    .plan-focus {
+      padding:12px 14px; border-radius:12px;
+      border:1px solid rgba(114,208,197,.1); background:rgba(114,208,197,.04);
+      color:var(--white); font-size:.92rem; line-height:1.7; margin-bottom:18px;
+    }
+    .plan ul { list-style:none; display:grid; gap:9px; flex-grow:1; margin-bottom:20px; }
+    .plan li { position:relative; padding-left:20px; color:var(--muted); font-size:.92rem; line-height:1.65; }
+    .plan li::before { content:'✓'; position:absolute; left:0; color:var(--aqua); font-weight:900; }
+    .plan-price { font-family:'Outfit',sans-serif; font-size:2.4rem; font-weight:800; color:var(--aqua); letter-spacing:-.04em; line-height:1; margin-bottom:6px; }
+    .plan-note { color:var(--muted); font-size:.85rem; margin-bottom:18px; line-height:1.5; }
+    .plan-btns { display:grid; gap:10px; margin-top:auto; }
+
+    /* ── TESTIMONIALS ── */
+    .testi-note { color:var(--muted); font-size:.9rem; margin-bottom:22px; font-style:italic; }
+    .quote {
+      position:relative; overflow:hidden;
+      background:linear-gradient(160deg,rgba(13,59,64,.3),rgba(4,15,16,.9));
+      border:1px solid var(--line); border-radius:var(--r);
+      padding:24px; box-shadow:var(--shadow);
+    }
+    .quote::before {
+      content:'"'; position:absolute; top:-14px; left:12px;
+      color:rgba(114,208,197,.15); font-size:5rem; font-weight:900; line-height:1;
+    }
+    .qt { position:relative; z-index:1; color:var(--white); font-size:.97rem; line-height:1.8; margin-bottom:14px; }
+    .qa { color:var(--aqua); font-weight:700; font-size:.88rem; }
+    .qr { color:var(--muted); font-size:.85rem; }
+
+    /* ── POLICY ── */
+    .pol { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .pc {
+      background:linear-gradient(160deg,rgba(13,59,64,.25),rgba(4,15,16,.9));
+      border:1px solid var(--line); border-radius:var(--r);
+      padding:20px; box-shadow:var(--shadow);
+    }
+    .pc-ico { width:36px; height:36px; border-radius:9px; background:rgba(114,208,197,.1); display:flex; align-items:center; justify-content:center; margin-bottom:10px; }
+    .pc-ico svg { width:18px; height:18px; stroke:var(--aqua); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+    .pc h3 { font-family:'Outfit',sans-serif; font-size:.95rem; font-weight:700; color:#fff; margin-bottom:6px; }
+    .pc p  { color:var(--muted); font-size:.88rem; line-height:1.65; }
+
+    /* ── FAQ ── */
+    .faq-cat { margin-bottom:28px; }
+    .faq-cat-title { font-family:'Outfit',sans-serif; font-size:1rem; font-weight:700; color:var(--aqua); margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid var(--line); }
+    .fi {
+      background:linear-gradient(160deg,rgba(13,59,64,.25),rgba(4,15,16,.9));
+      border:1px solid var(--line); border-radius:14px;
+      margin-bottom:10px; overflow:hidden;
+    }
+    .fq {
+      width:100%; background:transparent; border:0; color:#fff; text-align:left;
+      padding:17px 20px; display:flex; justify-content:space-between; align-items:center; gap:12px;
+      cursor:pointer; font:inherit; font-weight:600; font-size:.97rem;
+    }
+    .fq-arrow { color:var(--aqua); transition:transform .2s ease; flex-shrink:0; }
+    .fq-arrow svg { width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2.5; stroke-linecap:round; }
+    .fi.open .fq-arrow { transform:rotate(180deg); }
+    .fa-ans { max-height:0; overflow:hidden; transition:max-height .28s ease; }
+    .fa-ans-inner { padding:0 20px 16px; color:var(--muted); font-size:.95rem; line-height:1.75; }
+    .fa-ans-inner p+p { margin-top:8px; }
+
+    /* ── FINAL CTA ── */
+    .fcta {
+      position:relative; overflow:hidden;
+      background:radial-gradient(circle at top right, rgba(13,59,64,.5), transparent 55%),
+                 linear-gradient(160deg,rgba(13,59,64,.35),rgba(4,15,16,.98));
+      border:1px solid rgba(114,208,197,.24); border-radius:28px;
+      padding:40px; box-shadow:var(--shadow);
+    }
+    .fcta h2 { font-family:'Outfit',sans-serif; font-weight:800; font-size:clamp(1.8rem,4vw,2.8rem); line-height:1.08; letter-spacing:-.04em; color:#fff; margin-bottom:14px; }
+    .fcta p  { color:var(--muted); font-size:1.02rem; line-height:1.8; max-width:700px; margin-bottom:22px; }
+    .fcta-btns { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:14px; }
+    .fcta-note { color:var(--muted); font-size:.88rem; }
+
+    /* ── FOOTER ── */
+    footer { margin-top:48px; border-top:1px solid var(--line); background:rgba(2,8,9,.88); }
+    .foot-in { padding:32px 0 20px; display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:22px; }
+    .ft { color:#fff; font-family:'Outfit',sans-serif; font-size:.95rem; font-weight:700; margin-bottom:10px; }
+    .fc { color:var(--muted); font-size:.92rem; line-height:1.8; max-width:420px; }
+    .fl { display:grid; gap:8px; }
+    .fl a { color:var(--muted); font-size:.9rem; transition:.15s; }
+    .fl a:hover { color:var(--aqua); }
+    .foot-bot { padding:14px 0 24px; border-top:1px solid rgba(114,208,197,.06); color:#566e6e; font-size:.82rem; }
+
+    /* ── FAB ── */
+    .fab-w {
+      position:fixed; right:18px; bottom:18px; z-index:999;
+      width:56px; height:56px; border-radius:999px;
+      background:var(--wapp); color:#031a0e;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 14px 28px rgba(37,211,102,.3);
+      transition:.22s ease;
+    }
+    .fab-w:hover { transform:translateY(-3px) scale(1.05); box-shadow:0 18px 36px rgba(37,211,102,.38); }
+    .fab-w svg { width:26px; height:26px; fill:currentColor; }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1050px){
+      .hero-grid, .about-grid, .foot-in { grid-template-columns:1fr; }
+      .g3, .proc, .pol { grid-template-columns:repeat(2,1fr); }
+      .cycle { grid-template-columns:repeat(4,1fr); }
+    }
+    @media(max-width:780px){
+      .hdr { flex-direction:column; align-items:flex-start; padding:12px 0; }
+      .g3, .g2, .proc, .pol, .plans { grid-template-columns:1fr; }
+      .plans .plan.hl { transform:none; }
+      .cycle { grid-template-columns:repeat(2,1fr); }
+      .hero { padding:52px 0 40px; }
+      .hero-main { padding:26px; }
+      .sec { padding:52px 0; }
+      .fcta { padding:26px; }
+      .nav { flex-direction:column; width:100%; }
+      .nav a { width:100%; text-align:center; }
+    }
+    @media(max-width:520px){
+      .hero-h1 { font-size:1.9rem; }
+      .sec-h { font-size:1.6rem; }
+      .plan-price { font-size:2rem; }
+    }
+  </style>
+
 </head>
 <body>
-  <p>Redirecionando... <a href="Cat%C3%A1logo%20-%20Rafael%20Salomon%20-%202026.html">clique aqui</a> se não for redirecionado.</p>
+
+<header>
+  <div class="hdr">
+    <a href="#topo" class="logo" aria-label="Topo">
+      <span class="logo-name">Rafael Salomon</span>
+      <span class="logo-sub">Nutricionista clínico e esportivo &nbsp;·&nbsp; CRN-1 16718</span>
+    </a>
+    <nav class="nav">
+      <a href="#sobre">Sobre</a>
+      <a href="#planos">Planos</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="https://wa.me/5561995662828?text=Ol%C3%A1%20Rafael%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento" target="_blank" rel="noopener" class="cta-nav">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+
+<section class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div class="hero-main">
+      <span class="eyebrow">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Nutrição baseada em evidências
+      </span>
+      <h1 class="hero-h1">
+        Você não falhou<br>na dieta.<br><em>A estratégia falhou.</em>
+      </h1>
+      <p class="hero-desc">
+        Se você já tentou de tudo, cortou carboidrato, fez jejum, trocou de plano, e o resultado ainda não vem, o problema raramente é falta de vontade.<br><br>
+        <strong>É ausência de método.</strong> Eu construo o método com você.
+      </p>
+      <div class="hero-btns">
+        <a href="https://wa.me/5561995662828?text=Ol%C3%A1%20Rafael%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento" target="_blank" rel="noopener" class="btn btn-w">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.119 1.531 5.852L.055 23.454a.5.5 0 00.492.596l5.791-1.508A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.95 0-3.77-.534-5.322-1.46l-.381-.226-3.941 1.025 1.051-3.82-.248-.393A9.786 9.786 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+          Falar comigo
+        </a>
+        <a href="#planos" class="btn btn-o">Ver planos</a>
+      </div>
+    </div>
+
+```
+<div class="hero-aside">
+  <div class="aside-card">
+    <div class="aside-icon">
+      <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+    </div>
+    <h3>Sem terrorismo alimentar</h3>
+    <p>Minha conduta é decisão clínica, não guerra ideológica contra alimento. O que entra no plano precisa fazer sentido para o seu corpo e para a sua vida.</p>
+  </div>
+  <div class="aside-card">
+    <div class="aside-icon">
+      <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+    </div>
+    <h3>Plano que sobrevive à rotina real</h3>
+    <p>Não monto PDF bonito para desmoronar na primeira semana com plantão, viagem ou almoço de domingo.</p>
+  </div>
+  <div class="aside-card">
+    <div class="aside-icon">
+      <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    </div>
+    <h3>Progresso que você consegue medir</h3>
+    <p>Acompanhar não é torcer. É avaliar, interpretar, ajustar e continuar, sem ficar refém do "tudo ou nada".</p>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<main>
+
+  <!-- ── PROBLEMAS ── -->
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="g3">
+        <article class="card">
+          <div class="card-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <h3>Emagrecimento com método</h3>
+          <p>Organizo déficit, fome, adesão, comportamento e contexto. Não vendo sofrimento travestido de disciplina.</p>
+        </article>
+        <article class="card">
+          <div class="card-ico"><svg viewBox="0 0 24 24"><path d="M6.5 6.5h11M6.5 12h11M6.5 17.5h6"/><rect x="2" y="2" width="20" height="20" rx="3"/></svg></div>
+          <h3>Recomposição e performance</h3>
+          <p>Ajusto energia, proteína, distribuição de refeições e recuperação sem transformar suplemento em personagem principal.</p>
+        </article>
+        <article class="card">
+          <div class="card-ico"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h3>Condições clínicas</h3>
+          <p>Diabetes, dislipidemia, hipertensão, desconfortos intestinais e uso de GLP-1 pedem precisão, não receituário genérico.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CICLO ── -->
+
+  <section class="sec">
+    <div class="wrap">
+      <span class="sec-tag">Por que as dietas falham</span>
+      <h2 class="sec-h">O ciclo que a maioria não vê</h2>
+      <p class="sec-lead">O problema raramente é falta de vontade. O que costuma falhar é a estratégia: restrição alta, zero ajuste, nenhum plano quando a vida aperta.</p>
+      <div class="cycle">
+        <div class="cy"><div class="cy-n">1</div><h4>Excesso de peso</h4><p>A dor existe. A vontade aparece.</p></div>
+        <div class="cy"><div class="cy-n">2</div><h4>Dieta restritiva</h4><p>Corta tudo. A aderência cai.</p></div>
+        <div class="cy"><div class="cy-n">3</div><h4>Perde massa magra</h4><p>Sem proteína e treino, o corpo paga a conta.</p></div>
+        <div class="cy"><div class="cy-n">4</div><h4>Gasto cai</h4><p>O organismo se adapta. A margem aperta.</p></div>
+        <div class="cy"><div class="cy-n">5</div><h4>Mais fome</h4><p>Cansaço e impulsividade aumentam.</p></div>
+        <div class="cy"><div class="cy-n">6</div><h4>Abandono</h4><p>O deslize vira culpa. A culpa vira desistência.</p></div>
+        <div class="cy"><div class="cy-n">7</div><h4>Recomeço</h4><p>Volta ao ponto anterior. Mais frustrado.</p></div>
+      </div>
+      <div class="callout">
+        <strong>O ponto central:</strong> eu não trabalho para você nunca errar. Trabalho para você <strong>retomar rápido</strong>, ajustar quando necessário e continuar mesmo fora da semana ideal.
+      </div>
+    </div>
+  </section>
+
+  <!-- ── O QUE MUDA ── -->
+
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-h">Onde o acompanhamento muda o jogo</h2>
+      <p class="sec-lead">Saber o que fazer é pouco. O que muda resultado é saber aplicar, adaptar e continuar.</p>
+      <div class="g3">
+        <article class="card">
+          <div class="card-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <h3>Nutrição traduzida para o dia a dia</h3>
+          <p>Eu converto raciocínio clínico em estrutura alimentar que cabe na sua rotina real, não numa rotina fictícia de Instagram.</p>
+        </article>
+        <article class="card">
+          <div class="card-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+          <h3>Suporte e ajuste contínuo</h3>
+          <p>O plano evolui com o processo. Não fica congelado enquanto a sua vida muda de forma imprevisível.</p>
+        </article>
+        <article class="card">
+          <div class="card-ico"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <h3>Educação aplicada</h3>
+          <p>Você entende o porquê de cada decisão. Quando o raciocínio faz sentido, a dependência diminui e a autonomia aumenta.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ── -->
+
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-h">Como esse acompanhamento costuma ser percebido</h2>
+      <p class="testi-note">Exemplos de feedback que resumem o tipo de retorno que gero na prática. Relatos reais autorizados serão adicionados.</p>
+      <div class="g3">
+        <article class="quote">
+          <p class="qt">"Perdi 8 kg sem viver com fome. O plano finalmente encaixou no meu turno. Pela primeira vez eu não precisei fingir que minha rotina era perfeita."</p>
+          <div class="qa">Paciente com rotina em plantões</div>
+          <div class="qr">Emagrecimento e adesão</div>
+        </article>
+        <article class="quote">
+          <p class="qt">"Eu já treinava mas vivia no improviso. O processo trouxe ordem, desempenho e menos ansiedade, sem suplemento pra tudo."</p>
+          <div class="qa">Paciente em recomposição corporal</div>
+          <div class="qr">Performance e composição</div>
+        </article>
+        <article class="quote">
+          <p class="qt">"Comecei achando que seria mais um PDF. Não foi. Estava usando GLP-1 e os ajustes ao longo do processo fizeram diferença real na preservação de massa magra."</p>
+          <div class="qa">Paciente em terapia com GLP-1</div>
+          <div class="qr">Manejo clínico e monitoramento</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOBRE ── -->
+
+  <section class="sec" id="sobre">
+    <div class="wrap">
+      <div class="about-box">
+        <h2 class="sec-h">Quem sou eu</h2>
+        <p class="sec-lead">Sou Rafael Salomon. Trabalho com nutrição clínica e esportiva em Brasília. Não uso ciência como ornamento. Uso para decidir.</p>
+        <div class="about-grid">
+          <div>
+            <div class="photo-box">
+              <img src="RFL%20-%20Perfil.jpeg" alt="Rafael Salomon, nutricionista clínico e esportivo"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="photo-fb" style="display:none;">RS</div>
+            </div>
+          </div>
+          <div class="about-text">
+            <p>Minha formação inclui <strong>Nutrição Clínica, Esportiva e Funcional</strong>, com mais de uma década atendendo casos reais. Nesse tempo aprendi o que a maioria dos estudos elegantes ignora: que o maior obstáculo entre evidência e resultado é a vida real do paciente.</p>
+            <p>Sei o que é uma rotina que desmonta qualquer "protocolo perfeito" em três dias. É por isso que construo planos que <strong>sobrevivem à vida real</strong>, não planos que pressupõem que a vida vai colaborar.</p>
+            <p>O que entra na estratégia precisa respeitar três pilares: <strong>a melhor evidência disponível, minha experiência clínica e as suas preferências e contexto</strong>. Sem esse equilíbrio, qualquer plano quebra.</p>
+            <p>Aqui você não compra só um cardápio. <strong>Você ganha um sistema.</strong></p>
+            <div class="vals">
+              <div class="val"><h4>Clareza</h4><p>Explico o que estou fazendo, por quê e onde vale a pena ajustar.</p></div>
+              <div class="val"><h4>Rigor sem pedantismo</h4><p>Evidência boa chega ao paciente em linguagem útil, não em pose acadêmica.</p></div>
+              <div class="val"><h4>Zero hype</h4><p>Sem hack, sem terrorismo, sem suplemento tratado como religião.</p></div>
+              <div class="val"><h4>Adesão real</h4><p>O objetivo não é impressionar na consulta. É funcionar no mês seguinte.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROCESSO ── -->
+
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-h">Como funciona o acompanhamento</h2>
+      <p class="sec-lead">Processo bom não depende de adivinhação. Depende de sequência lógica.</p>
+      <div class="proc">
+        <article class="ps">
+          <div class="ps-n">1</div>
+          <h3>Diagnóstico do caso</h3>
+          <p>Avalio objetivo, histórico, sintomas, exames, rotina, composição corporal e o que costuma derrubar adesão.</p>
+        </article>
+        <article class="ps">
+          <div class="ps-n">2</div>
+          <h3>Estratégia aplicável</h3>
+          <p>Transformo raciocínio clínico em estrutura alimentar viável, com prioridades claras e menos ruído desnecessário.</p>
+        </article>
+        <article class="ps">
+          <div class="ps-n">3</div>
+          <h3>Ajustes guiados</h3>
+          <p>Conforme resposta clínica, performance, fome e rotina, refino a conduta em vez de insistir no que não funciona.</p>
+        </article>
+        <article class="ps">
+          <div class="ps-n">4</div>
+          <h3>Manutenção inteligente</h3>
+          <p>O objetivo não é emagrecer por algumas semanas. É manter resultado com menos atrito e mais autonomia.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PLANOS ── -->
+
+  <section class="sec" id="planos">
+    <div class="wrap">
+      <span class="sec-tag">Planos de acompanhamento</span>
+      <h2 class="sec-h">Escolha o tempo de trabalho certo para o seu objetivo</h2>
+      <p class="sec-lead">Resultado em nutrição não acontece em consulta avulsa. Acontece no intervalo entre elas, no ajuste, no suporte, na correção de rota quando a semana não sai como planejado. Em dúvida sobre qual faz sentido? Me chama antes de decidir.</p>
+
+```
+  <div class="plans" style="grid-template-columns:repeat(3,1fr);max-width:1060px;">
+
+    <article class="plan">
+      <span class="plan-badge">Entrada</span>
+      <h3>Acompanhamento 30 dias</h3>
+      <p class="plan-sub">Para quem quer começar com estrutura e sem compromisso longo</p>
+      <div class="plan-focus">
+        Indicado para quem vem de indicação, quer conhecer o método na prática ou tem um objetivo pontual bem definido. Entrega completa desde a primeira consulta.
+      </div>
+      <ul>
+        <li>Consulta inicial completa: anamnese clínica e histórico alimentar</li>
+        <li>Avaliação de composição corporal por análise fotográfica 3D</li>
+        <li>Planejamento alimentar personalizado entregue em até 72h (PDF e/ou WebDiet)</li>
+        <li>1 retorno com reavaliação ao final do período</li>
+        <li>Prescrição de suplementação quando indicada clinicamente</li>
+        <li>Suporte via WhatsApp para dúvidas pontuais do cotidiano</li>
+        <li>Online (Brasil todo) ou presencial em Brasília</li>
+      </ul>
+      <div class="plan-price">R$ 350</div>
+      <p class="plan-note">Consulta completa, plano personalizado e acompanhamento por 30 dias.</p>
+      <div class="plan-btns">
+        <a href="https://wa.me/5561995662828?text=Ol%C3%A1%20Rafael%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20de%2030%20dias" target="_blank" rel="noopener" class="btn btn-w">Falar comigo</a>
+        <a href="https://loja.infinitepay.io/rafasalomon" target="_blank" rel="noopener" class="btn btn-a">Pagar agora</a>
+      </div>
+    </article>
+
+    <article class="plan hl">
+      <span class="plan-badge">Mais procurado</span>
+      <h3>Acompanhamento 90 dias</h3>
+      <p class="plan-sub">Para quem quer sair do improviso e ver progresso consistente</p>
+      <div class="plan-focus">
+        Tempo suficiente para avaliar com profundidade, montar estratégia real, ajustar conforme resposta clínica e construir rotina com base em método.
+      </div>
+      <ul>
+        <li>Consulta inicial completa: anamnese clínica, histórico alimentar e identificação dos condicionantes individuais</li>
+        <li>Avaliação de composição corporal por análise fotográfica 3D (Shaped / WebDiet)</li>
+        <li>Planejamento alimentar personalizado entregue em até 72h (PDF e/ou WebDiet)</li>
+        <li>3 retornos com reavaliação de composição corporal</li>
+        <li>Ajustes do plano alimentar conforme evolução clínica</li>
+        <li>Prescrição de suplementação quando indicada clinicamente</li>
+        <li>Material educativo personalizado ao caso</li>
+        <li>Suporte via WhatsApp para dúvidas pontuais do cotidiano</li>
+        <li>Videocalls quinzenais de acompanhamento</li>
+        <li>Online (Brasil todo) ou presencial em Brasília</li>
+      </ul>
+      <div class="plan-price">R$ 840</div>
+      <p class="plan-note">R$ 280/mês. Consulta especializada, suporte, avaliações e material educativo.</p>
+      <div class="plan-btns">
+        <a href="https://wa.me/5561995662828?text=Ol%C3%A1%20Rafael%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20de%2090%20dias" target="_blank" rel="noopener" class="btn btn-w">Falar comigo</a>
+        <a href="https://loja.infinitepay.io/rafasalomon" target="_blank" rel="noopener" class="btn btn-a">Pagar agora</a>
+      </div>
+    </article>
+
+    <article class="plan">
+      <span class="plan-badge">Consolidação</span>
+      <h3>Acompanhamento 180 dias</h3>
+      <p class="plan-sub">Para quem já tentou e não manteve, ou quer consolidar de verdade</p>
+      <div class="plan-focus">
+        Indicado para histórico de reganho, condições metabólicas que respondem mais lentamente, ou quem quer construir autonomia alimentar real e não só resultado no curto prazo.
+      </div>
+      <ul>
+        <li>Tudo do plano de 90 dias</li>
+        <li>2 consultas adicionais (total de 6 ao longo do período)</li>
+        <li>Avaliações de composição corporal a cada 45 dias</li>
+        <li>Atualizações mensais do planejamento alimentar</li>
+        <li>Prescrição de suplementação reavaliada conforme exames e evolução</li>
+        <li>Suporte via WhatsApp para dúvidas pontuais do cotidiano</li>
+        <li>Videocalls quinzenais de acompanhamento</li>
+        <li>Online (Brasil todo) ou presencial em Brasília</li>
+      </ul>
+      <div class="plan-price">R$ 1.680</div>
+      <p class="plan-note">R$ 280/mês. Custo menor por mês, com mais tempo de trabalho e mais pontos de ajuste.</p>
+      <div class="plan-btns">
+        <a href="https://wa.me/5561995662828?text=Ol%C3%A1%20Rafael%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20de%20180%20dias" target="_blank" rel="noopener" class="btn btn-w">Falar comigo</a>
+        <a href="https://loja.infinitepay.io/rafasalomon" target="_blank" rel="noopener" class="btn btn-a">Pagar agora</a>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="max-width:1060px;margin:20px auto 0;">
+    <strong>Em dúvida sobre qual plano faz sentido?</strong> Me chama no WhatsApp antes de qualquer pagamento. Eu te digo qual encaixa melhor para o seu caso.
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- ── POLÍTICAS ── -->
+
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="sec-h">Atendimento sem letra miúda desnecessária</h2>
+      <p class="sec-lead">Transparência também converte. E evita mal-entendido depois.</p>
+      <div class="pol">
+        <article class="pc">
+          <div class="pc-ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h3>Online e presencial</h3>
+          <p>Atendo por videochamada para todo o Brasil e presencialmente em Brasília, conforme disponibilidade e necessidade do caso.</p>
+        </article>
+        <article class="pc">
+          <div class="pc-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <h3>Entrega do plano</h3>
+          <p>O material é entregue em até 72 horas após a consulta, em PDF ou pelo WebDiet, conforme sua preferência.</p>
+        </article>
+        <article class="pc">
+          <div class="pc-ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <h3>Suporte via WhatsApp</h3>
+          <p>Destinado a dúvidas pontuais do cotidiano. Questões clínicas mais complexas são tratadas nas consultas e videocalls agendadas.</p>
+        </article>
+        <article class="pc">
+          <div class="pc-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>Remarcação e vigência</h3>
+          <p>As consultas precisam respeitar a vigência do plano. Remarcações com antecedência preservam organização e continuidade do processo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <h2 class="sec-h">Perguntas frequentes</h2>
+      <p class="sec-lead">Dúvidas reais, respostas objetivas.</p>
+
+```
+  <div class="faq-cat">
+    <h3 class="faq-cat-title">Emagrecimento</h3>
+    <div class="fi open">
+      <button class="fq" aria-expanded="true">
+        <span>Preciso cortar carboidrato para emagrecer?</span>
+        <span class="fq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="fa-ans" style="max-height:220px">
+        <div class="fa-ans-inner">
+          <p>Não por decreto. O que precisa funcionar é a estratégia como um todo.</p>
+          <p>Eu ajusto energia, fome, rotina, treino, aderência e preferência alimentar. Guerra ideológica contra macronutriente costuma render mais barulho do que resultado.</p>
+        </div>
+      </div>
+    </div>
+    <div class="fi">
+      <button class="fq" aria-expanded="false">
+        <span>E se eu viajar e bagunçar tudo?</span>
+        <span class="fq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="fa-ans">
+        <div class="fa-ans-inner">
+          <p>Viajar faz parte da vida real, então o plano já nasce preparado para isso.</p>
+          <p>Trabalho com estratégia de contingência e retorno. A ideia é evitar que um período fora do eixo vire a desculpa oficial para abandonar o processo inteiro.</p>
+        </div>
+      </div>
+    </div>
+    <div class="fi">
+      <button class="fq" aria-expanded="false">
+        <span>Já tentei várias dietas. O que muda aqui?</span>
+        <span class="fq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="fa-ans">
+        <div class="fa-ans-inner">
+          <p>A maioria das tentativas falha porque entrega regra sem estrutura, e culpa sem ajuste.</p>
+          <p>Aqui eu construo sistema, acompanho resposta e corrijo rota. Você não compra só uma lista de alimentos. Compra raciocínio clínico e continuidade.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-cat">
+    <h3 class="faq-cat-title">Recomposição e performance</h3>
+    <div class="fi">
+      <button class="fq" aria-expanded="false">
+        <span>Suplemento é obrigatório?</span>
+        <span class="fq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="fa-ans">
+        <div class="fa-ans-inner">
+          <p>Não. Suplemento é ferramenta, não figurino.</p>
+          <p>Quando entra, entra por necessidade, custo-benefício, segurança e praticidade. Quando não faz falta, não invento justificativa para pose tecnológica.</p>
+        </div>
+      </div>
+    </div>
+    <div class="fi">
+      <button class="fq" aria-expanded="false">
+        <span>Dá para ganhar massa e perder gordura ao mesmo tempo?</span>
+        <span class="fq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="fa-ans">
+        <div class="fa-ans-inner">
+          <p>Em alguns contextos, sim, principalmente quando há margem para melhorar treino, proteína, sono e aderência.</p>
+          <p>Avalio o seu cenário e defino a melhor prioridade. Nem toda fase pede pressa. Às vezes pede direção.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-cat">
+    <h3 class="faq-cat-title">Condições clínicas</h3>
+    <div class="fi">
+      <button class="fq" aria-expanded="false">
+        <span>Você atende diabetes, hipertensão e colesterol alto?</span>
+        <span class="fq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="fa-ans">
+        <div class="fa-ans-inner">
+          <p>Sim. Minha abordagem integra exames, sintomas, medicação, rotina e preferência alimentar.</p>
+          <p>O objetivo é reduzir risco, melhorar controle e construir um padrão alimentar que você consiga manter sem viver em dieta punitiva.</p>
+        </div>
+      </div>
+    </div>
+    <div class="fi">
+      <button class="fq" aria-expanded="false">
+        <span>Funciona para quem está usando GLP-1?</span>
+        <span class="fq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="fa-ans">
+        <div class="fa-ans-inner">
+          <p>Sim, e normalmente faz ainda mais sentido.</p>
+          <p>Com GLP-1 preciso pensar em tolerância gastrointestinal, saciedade, ingestão proteica, hidratação e preservação de massa magra. Menos apetite não é licença para piorar a qualidade da dieta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-cat">
+    <h3 class="faq-cat-title">Planos e atendimento</h3>
+    <div class="fi">
+      <button class="fq" aria-expanded="false">
+        <span>Posso fazer tudo online?</span>
+        <span class="fq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="fa-ans">
+        <div class="fa-ans-inner">
+          <p>Sim. Atendo por videochamada e mantenho suporte via WhatsApp. A avaliação de composição corporal é feita remotamente por análise fotográfica 3D.</p>
+          <p>A consulta online funciona muito bem quando o processo é organizado com critério.</p>
+        </div>
+      </div>
+    </div>
+    <div class="fi">
+      <button class="fq" aria-expanded="false">
+        <span>Como funciona a avaliação de composição corporal online?</span>
+        <span class="fq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="fa-ans">
+        <div class="fa-ans-inner">
+          <p>Uso análise fotográfica 3D pelas plataformas Shaped e WebDiet, metodologias validadas para monitoramento remoto de evolução de composição corporal.</p>
+          <p>Você envia fotos padronizadas. Não precisa de balança de bioimpedância nem equipamento especial. A avaliação serve para orientar decisões clínicas ao longo do processo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="fi">
+      <button class="fq" aria-expanded="false">
+        <span>Como escolho entre 90 e 180 dias?</span>
+        <span class="fq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="fa-ans">
+        <div class="fa-ans-inner">
+          <p>90 dias funciona bem para quem está começando, tem objetivo mais definido e quer estrutura com tempo real de ajuste.</p>
+          <p>180 dias faz mais sentido para quem tem histórico de tentativas frustradas, condições metabólicas que respondem mais lentamente, ou quer construir autonomia alimentar de verdade. Em dúvida? Me chama antes de decidir.</p>
+        </div>
+      </div>
+    </div>
+    <div class="fi">
+      <button class="fq" aria-expanded="false">
+        <span>O que eu recebo na prática além do PDF?</span>
+        <span class="fq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="fa-ans">
+        <div class="fa-ans-inner">
+          <p>Raciocínio clínico aplicado, direcionamento, ajuste, monitoramento e educação alimentar prática.</p>
+          <p>O PDF é só um pedaço da entrega. O valor real está na leitura do caso, nas correções de rota e no sistema que vai sendo refinado com você.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- ── CTA FINAL ── -->
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="fcta" id="contato">
+        <h2>Se você quer método, clareza e acompanhamento de verdade, eu consigo te ajudar</h2>
+        <p>Não vendo milagre. Vendo processo bem construído, com ciência, contexto e ajuste. O foco é criar uma estratégia que funcione agora e continue funcionando quando a semana apertar.</p>
+        <div class="fcta-btns">
+          <a href="https://wa.me/5561995662828?text=Ol%C3%A1%20Rafael%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento" target="_blank" rel="noopener" class="btn btn-w">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.119 1.531 5.852L.055 23.454a.5.5 0 00.492.596l5.791-1.508A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.95 0-3.77-.534-5.322-1.46l-.381-.226-3.941 1.025 1.051-3.82-.248-.393A9.786 9.786 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+            Falar comigo
+          </a>
+          <a href="https://loja.infinitepay.io/rafasalomon" target="_blank" rel="noopener" class="btn btn-a">Pagar agora</a>
+        </div>
+        <p class="fcta-note">Comece hoje. Ajuste amanhã. Mantenha depois. Esse é o ponto.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <h3 class="ft">Rafael Salomon</h3>
+        <p class="fc">Nutricionista clínico e esportivo, com atuação em emagrecimento, recomposição corporal, performance e condições clínicas. Atendimento dentro dos limites legais e éticos da profissão.</p>
+      </div>
+      <div>
+        <h3 class="ft">Contato</h3>
+        <div class="fl">
+          <a href="https://wa.me/5561995662828?text=Ol%C3%A1%20Rafael%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento" target="_blank" rel="noopener">WhatsApp: (61) 99566-2828</a>
+          <a href="mailto:rafaelsalomon@gmail.com">rafaelsalomon@gmail.com</a>
+          <a href="https://instagram.com/rafaelsalomon.nutri" target="_blank" rel="noopener">@rafaelsalomon.nutri</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="ft">Atalhos</h3>
+        <div class="fl">
+          <a href="#sobre">Sobre</a>
+          <a href="#planos">Planos</a>
+          <a href="#faq">Perguntas frequentes</a>
+          <a href="https://loja.infinitepay.io/rafasalomon" target="_blank" rel="noopener">Pagamento</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span id="yr"></span> Rafael Salomon · Nutricionista clínico e esportivo · CRN-1 16718
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5561995662828?text=Ol%C3%A1%20Rafael%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento"
+target="_blank" rel="noopener" class="fab-w" aria-label="WhatsApp">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.119 1.531 5.852L.055 23.454a.5.5 0 00.492.596l5.791-1.508A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.95 0-3.77-.534-5.322-1.46l-.381-.226-3.941 1.025 1.051-3.82-.248-.393A9.786 9.786 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+</a>
+
+<script>
+  document.getElementById('yr').textContent = '© ' + new Date().getFullYear();
+  document.querySelectorAll('.fq').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const fi = btn.closest('.fi');
+      const isOpen = fi.classList.contains('open');
+      document.querySelectorAll('.fi').forEach(f => {
+        f.classList.remove('open');
+        f.querySelector('.fq').setAttribute('aria-expanded','false');
+        f.querySelector('.fa-ans').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        fi.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        fi.querySelector('.fa-ans').style.maxHeight = fi.querySelector('.fa-ans').scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
