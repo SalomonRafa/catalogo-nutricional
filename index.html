@@ -42,7 +42,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(4,15,16,0.88
 .btn-o:hover{background:rgba(114,208,197,0.07);border-color:var(--aqua);}
 
 /* HERO */
-.hero-wrap{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px;padding:100px 0 80px;}
+.hero-wrap{display:grid;grid-template-columns:1fr;align-items:center;gap:48px;padding:120px 0 80px;max-width:760px;}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:0.82rem;font-weight:600;color:var(--aqua);margin-bottom:28px;}
 .hero-badge svg{width:14px;height:14px;stroke:var(--aqua);fill:none;stroke-width:2;}
 .hero-title{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(2.8rem,5vw,4.2rem);line-height:1.05;letter-spacing:-0.03em;color:#fff;margin-bottom:20px;}
@@ -55,8 +55,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(4,15,16,0.88
 .hero-trust{display:flex;gap:28px;margin-top:40px;padding-top:36px;border-top:1px solid var(--line);flex-wrap:wrap;}
 .trust-item{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--muted);}
 .trust-item svg{width:14px;height:14px;stroke:var(--aqua);fill:none;stroke-width:2;flex-shrink:0;}
-.photo-box{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--bg2);}
-.photo-box img{width:100%;min-height:420px;object-fit:cover;object-position:top center;}
 
 /* SECTIONS */
 section{padding:88px 0;}
@@ -205,31 +203,16 @@ footer{background:rgba(2,8,9,.8);padding:48px 0;border-top:1px solid var(--line)
 .wa-float:hover{transform:scale(1.08);}
 .wa-float svg{width:26px;height:26px;fill:#fff;}
 
-/* ANÚNCIOS */
-.ad-tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
-.ad-tab{padding:8px 18px;border-radius:999px;font-family:'Outfit',sans-serif;font-size:.84rem;font-weight:600;border:1px solid var(--line2);color:var(--muted);cursor:pointer;transition:all .2s;background:transparent;}
-.ad-tab.ativo{background:var(--aqua);color:#031a0e;border-color:var(--aqua);}
-.ad-content{display:none;}
-.ad-content.ativo{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.ad-card{border:1px solid var(--line);border-radius:var(--r);padding:26px 22px;}
-.ad-formato{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--aqua);opacity:.6;margin-bottom:12px;}
-.ad-headline{font-family:'Outfit',sans-serif;font-size:1.08rem;font-weight:800;color:#fff;line-height:1.3;margin-bottom:12px;letter-spacing:-.01em;}
-.ad-body{font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:18px;}
-.ad-cta{display:inline-flex;align-items:center;gap:7px;background:var(--wapp);color:#031a0e;padding:9px 18px;border-radius:10px;font-family:'Outfit',sans-serif;font-size:.84rem;font-weight:700;transition:background .2s;}
-.ad-cta:hover{background:#1fb357;}
-
 /* WA ICON */
 .ico-wa{display:inline-block;width:16px;height:16px;vertical-align:middle;}
 
 @media(max-width:900px){
   nav .nav-links{display:none;}
   .hero-wrap{grid-template-columns:1fr;padding:80px 0 60px;}
-  .hero-photo{order:-1;}
   .ciclo-grid{grid-template-columns:repeat(2,1fr);}
   .dif-grid,.plans,.proof-grid,.steps{grid-template-columns:1fr;}
   .entrega-grid,.rec-grid,.pilares-grid{grid-template-columns:1fr;}
   .sobre-grid{grid-template-columns:1fr;}
-  .ad-content.ativo{grid-template-columns:1fr;}
   footer .footer-inner{flex-direction:column;}
 }
 </style>
@@ -587,77 +570,6 @@ footer{background:rgba(2,8,9,.8);padding:48px 0;border-top:1px solid var(--line)
   </div>
 </section>
 
-<!-- COPY DE ANÚNCIOS -->
-<section id="anuncios">
-  <div class="wrap">
-    <div class="section-pill">Copy de anúncios</div>
-    <h2 class="section-h">Mensagens prontas por segmento</h2>
-    <p class="section-sub">Textos calibrados por dor específica para Instagram, Google e WhatsApp. Cada um leva para mensagem pré-preenchida no WhatsApp.</p>
-    <div class="ad-tabs">
-      <button class="ad-tab ativo" onclick="trocarAd('emagrecimento',this)">Emagrecimento</button>
-      <button class="ad-tab" onclick="trocarAd('glp1',this)">GLP-1</button>
-      <button class="ad-tab" onclick="trocarAd('exames',this)">Exames alterados</button>
-      <button class="ad-tab" onclick="trocarAd('recomposicao',this)">Recomposição</button>
-    </div>
-    <div id="ad-emagrecimento" class="ad-content ativo">
-      <div class="ad-card">
-        <div class="ad-formato">Instagram · Feed · Imagem</div>
-        <div class="ad-headline">Você não está comendo errado. Está sem método.</div>
-        <div class="ad-body">Já tentou low carb, jejum, cortar doce, tudo de uma vez. O peso vai, volta, e você fica se culpando. O problema raramente é o alimento. É a ausência de estratégia que sobrevive à sua rotina real.<br><br>Nutrição clínica com método real. Sem terrorismo alimentar. Sem PDF genérico.</div>
-        <a class="ad-cta" href="https://wa.me/5561995662828?text=Olá%2C+Rafael.+Vim+pelo+anúncio+sobre+emagrecimento+sem+dieta+impossível.+Quero+entender+qual+acompanhamento+faz+sentido+para+mim." target="_blank">Fazer pré-avaliação</a>
-      </div>
-      <div class="ad-card">
-        <div class="ad-formato">Linha 2 · Culpa e recomeço</div>
-        <div class="ad-headline">Se toda dieta começa bem e desanda depois, talvez o problema não seja sua força de vontade.</div>
-        <div class="ad-body">Talvez seja o método. Restrição alta, zero ajuste, nenhum plano quando a semana aperta. É o ciclo que a maioria repete sem perceber.<br><br>Acompanhamento nutricional para sair desse ciclo de vez.</div>
-        <a class="ad-cta" href="https://wa.me/5561995662828?text=Olá%2C+Rafael.+Vim+pelo+anúncio+sobre+emagrecimento+sem+dieta+impossível.+Quero+entender+qual+acompanhamento+faz+sentido+para+mim." target="_blank">Entender o acompanhamento</a>
-      </div>
-    </div>
-    <div id="ad-glp1" class="ad-content">
-      <div class="ad-card">
-        <div class="ad-formato">Instagram · Feed · Imagem</div>
-        <div class="ad-headline">Está usando GLP-1? Menos fome não substitui estratégia.</div>
-        <div class="ad-body">Semaglutida, tirzepatida, liraglutida. A medicação reduz o apetite. Mas proteína, hidratação, tolerância gastrointestinal e preservação de massa magra precisam de acompanhamento nutricional preciso.<br><br>Acompanhamento para organizar o que fazer com essa janela de oportunidade.</div>
-        <a class="ad-cta" href="https://wa.me/5561995662828?text=Olá%2C+Rafael.+Vim+pelo+anúncio+sobre+acompanhamento+nutricional+para+quem+usa+GLP-1.+Quero+avaliar+meu+caso." target="_blank">Avaliar meu caso</a>
-      </div>
-      <div class="ad-card">
-        <div class="ad-formato">Instagram · Stories</div>
-        <div class="ad-headline">Emagrecendo com GLP-1 mas preocupado com perda de músculo?</div>
-        <div class="ad-body">É uma preocupação legítima. A perda de massa magra durante o uso de GLP-1 depende diretamente de como a alimentação é estruturada. Proteína, calorias, distribuição de refeições e treino precisam funcionar juntos.<br><br>Atendimento online para todo o Brasil.</div>
-        <a class="ad-cta" href="https://wa.me/5561995662828?text=Olá%2C+Rafael.+Vim+pelo+anúncio+sobre+acompanhamento+nutricional+para+quem+usa+GLP-1.+Quero+avaliar+meu+caso." target="_blank">Falar comigo</a>
-      </div>
-    </div>
-    <div id="ad-exames" class="ad-content">
-      <div class="ad-card">
-        <div class="ad-formato">Instagram · Feed · Imagem</div>
-        <div class="ad-headline">Seu exame veio alterado. Agora você precisa de plano, não de pânico.</div>
-        <div class="ad-body">Colesterol, glicemia, resistência à insulina, esteatose, hipertensão. Receber recomendação genérica de "comer melhor" não resolve caso clínico.<br><br>Acompanhamento nutricional para organizar alimentação, rotina, exames e metas clínicas com clareza.</div>
-        <a class="ad-cta" href="https://wa.me/5561995662828?text=Olá%2C+Rafael.+Vim+pelo+anúncio+sobre+exames+alterados+e+nutrição+clínica.+Quero+entender+como+funciona." target="_blank">Fazer pré-avaliação clínica</a>
-      </div>
-      <div class="ad-card">
-        <div class="ad-formato">Google Ads · Search</div>
-        <div class="ad-headline">Nutricionista para resistência à insulina, colesterol e saúde metabólica · Brasília e online</div>
-        <div class="ad-body">Conduta nutricional precisa para condições metabólicas. Leitura de exames com lente nutricional, plano personalizado e acompanhamento de evolução clínica. Presencial em Brasília e videochamada para todo o Brasil.</div>
-        <a class="ad-cta" href="https://wa.me/5561995662828?text=Olá%2C+Rafael.+Vim+pelo+anúncio+sobre+exames+alterados+e+nutrição+clínica.+Quero+entender+como+funciona." target="_blank">Agendar avaliação</a>
-      </div>
-    </div>
-    <div id="ad-recomposicao" class="ad-content">
-      <div class="ad-card">
-        <div class="ad-formato">Instagram · Stories · Vídeo</div>
-        <div class="ad-headline">Treina meses. O músculo não aparece. A balança não mexe. Você não está treinando errado.</div>
-        <div class="ad-body">Recomposição corporal não acontece sem estratégia nutricional precisa. Energia, proteína, distribuição de refeições e recuperação precisam funcionar em conjunto.<br><br>Não vendo suplemento como solução. Vendo estrutura alimentar que faz o treino responder de verdade.</div>
-        <a class="ad-cta" href="https://wa.me/5561995662828?text=Olá%2C+Rafael.+Vim+pelo+anúncio+sobre+recomposição+corporal.+Quero+entender+qual+acompanhamento+faz+sentido+para+mim." target="_blank">Quero ver meu caso</a>
-      </div>
-      <div class="ad-card">
-        <div class="ad-formato">Instagram · Feed · Carrossel</div>
-        <div class="ad-headline">5 razões por que sua recomposição trava mesmo treinando direito</div>
-        <div class="ad-body">1. Proteína insuficiente no timing certo.<br>2. Déficit mal calibrado, perde músculo junto com gordura.<br>3. Distribuição de refeições sem relação com o treino.<br>4. Recuperação negligenciada.<br>5. Plano que não se adapta quando a rotina muda.<br><br>[Último slide: CTA para WhatsApp]</div>
-        <a class="ad-cta" href="https://wa.me/5561995662828?text=Olá%2C+Rafael.+Vim+pelo+anúncio+sobre+recomposição+corporal.+Quero+entender+qual+acompanhamento+faz+sentido+para+mim." target="_blank">Entrar em contato</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- SOBRE -->
 <section class="bg2" id="sobre">
   <div class="wrap">
@@ -743,12 +655,6 @@ footer{background:rgba(2,8,9,.8);padding:48px 0;border-top:1px solid var(--line)
 </a>
 
 <script>
-function trocarAd(id,btn){
-  document.querySelectorAll('.ad-content').forEach(el=>el.classList.remove('ativo'));
-  document.querySelectorAll('.ad-tab').forEach(el=>el.classList.remove('ativo'));
-  document.getElementById('ad-'+id).classList.add('ativo');
-  btn.classList.add('ativo');
-}
 function toggleFaq(item){
   const isOpen=item.classList.contains('open');
   document.querySelectorAll('.faq-item').forEach(el=>el.classList.remove('open'));
