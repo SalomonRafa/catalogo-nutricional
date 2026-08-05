@@ -132,7 +132,7 @@
     .hero-copy strong { color: var(--white); }
     .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
     .microcopy { margin-top: 14px; color: var(--muted-2); font-size: .82rem; }
-    .trust-row { display: flex; gap: 22px; flex-wrap: wrap; padding-top: 32px; margin-top: 38px; border-top: 1px solid var(--line); }
+    .trust-row { display: flex; gap: 22px; flex-wrap: wrap; padding-top: 32px; margin-top: 38px; border-top: 1px solid var(--line); list-style: none; }
     .trust-item { color: var(--muted); font-size: .84rem; display: flex; align-items: center; gap: 8px; }
     .trust-item::before { content: "✓"; color: var(--aqua); font-weight: 800; }
     .hero-panel {
@@ -300,11 +300,11 @@
             <a class="btn btn-secondary" href="#planos">Comparar acompanhamentos</a>
           </div>
           <p class="microcopy">Você me conta seu objetivo e suas principais dificuldades. Eu explico qual formato faz sentido antes de qualquer pagamento.</p>
-          <div class="trust-row" aria-label="Informações profissionais">
-            <div class="trust-item">Mais de uma década de prática clínica</div>
-            <div class="trust-item">Online para todo o Brasil</div>
-            <div class="trust-item">Presencial em Brasília</div>
-          </div>
+          <ul class="trust-row" aria-label="Informações profissionais">
+            <li class="trust-item">Mais de uma década de prática clínica</li>
+            <li class="trust-item">Online para todo o Brasil</li>
+            <li class="trust-item">Presencial em Brasília</li>
+          </ul>
         </div>
         <aside class="hero-panel" aria-label="Como começa o acompanhamento">
           <div class="hero-panel-label">Antes de prescrever, eu preciso entender</div>
@@ -516,31 +516,31 @@
         <h2 class="section-title">Dúvidas que interferem na decisão</h2>
         <div class="faq">
           <article class="faq-item">
-            <button class="faq-question" aria-expanded="false">Preciso cortar carboidratos para emagrecer?<span class="faq-icon">+</span></button>
+            <button type="button" class="faq-question" aria-expanded="false">Preciso cortar carboidratos para emagrecer?<span class="faq-icon">+</span></button>
             <div class="faq-answer">Não por regra. Quantidade, distribuição, preferências, gasto energético e contexto clínico importam mais do que transformar um nutriente em vilão. A estratégia é definida a partir do caso.</div>
           </article>
           <article class="faq-item">
-            <button class="faq-question" aria-expanded="false">Tenho exames alterados. Você substitui o acompanhamento médico?<span class="faq-icon">+</span></button>
+            <button type="button" class="faq-question" aria-expanded="false">Tenho exames alterados. Você substitui o acompanhamento médico?<span class="faq-icon">+</span></button>
             <div class="faq-answer">Não. Avalio as implicações nutricionais dos exames disponíveis e integro essas informações à conduta alimentar. Diagnóstico médico, mudança de medicamento e tratamento fora do escopo nutricional permanecem com o profissional responsável.</div>
           </article>
           <article class="faq-item">
-            <button class="faq-question" aria-expanded="false">Suplementação é obrigatória?<span class="faq-icon">+</span></button>
+            <button type="button" class="faq-question" aria-expanded="false">Suplementação é obrigatória?<span class="faq-icon">+</span></button>
             <div class="faq-answer">Não. A suplementação é considerada quando existe indicação nutricional ou clínica, levando em conta alimentação, exames, objetivo, segurança, interações e relação entre custo e benefício.</div>
           </article>
           <article class="faq-item">
-            <button class="faq-question" aria-expanded="false">Como funciona para quem usa GLP-1?<span class="faq-icon">+</span></button>
+            <button type="button" class="faq-question" aria-expanded="false">Como funciona para quem usa GLP-1?<span class="faq-icon">+</span></button>
             <div class="faq-answer">O acompanhamento pode ajudar a organizar ingestão proteica, tolerância alimentar, hidratação, fibras, treino e monitoramento da composição corporal. A medicação e seus ajustes permanecem sob responsabilidade do prescritor.</div>
           </article>
           <article class="faq-item">
-            <button class="faq-question" aria-expanded="false">Posso fazer tudo online?<span class="faq-icon">+</span></button>
+            <button type="button" class="faq-question" aria-expanded="false">Posso fazer tudo online?<span class="faq-icon">+</span></button>
             <div class="faq-answer">Sim. Consulta, acompanhamento e entrega do plano podem ser realizados online. Quando utilizo estimativas remotas de composição corporal, explico o método, a padronização necessária e suas limitações.</div>
           </article>
           <article class="faq-item">
-            <button class="faq-question" aria-expanded="false">Como escolhemos entre 30, 90 e 180 dias?<span class="faq-icon">+</span></button>
+            <button type="button" class="faq-question" aria-expanded="false">Como escolhemos entre 30, 90 e 180 dias?<span class="faq-icon">+</span></button>
             <div class="faq-answer">A escolha depende da complexidade do caso, histórico de tentativas, necessidade de reavaliação e tempo provável para testar a estratégia em diferentes situações. A pré-avaliação existe para orientar essa decisão.</div>
           </article>
           <article class="faq-item">
-            <button class="faq-question" aria-expanded="false">O suporte pelo WhatsApp é ilimitado?<span class="faq-icon">+</span></button>
+            <button type="button" class="faq-question" aria-expanded="false">O suporte pelo WhatsApp é ilimitado?<span class="faq-icon">+</span></button>
             <div class="faq-answer">Não. É um canal para dúvidas pontuais, intercorrências e ajustes relacionados ao acompanhamento, dentro dos horários e limites definidos em contrato. Não substitui consulta, urgência médica ou atendimento de outros profissionais.</div>
           </article>
         </div>
