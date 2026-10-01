@@ -150,6 +150,7 @@
     .hero-panel li span { width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--line-strong); border-radius: 50%; color: var(--aqua); font: 700 .82rem "Outfit", sans-serif; }
 
     .path-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .path-grid.two { grid-template-columns: repeat(2, 1fr); margin-top: 18px; }
     .path-card, .method-card, .plan-card, .value-card {
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -246,7 +247,7 @@
       .nav-links { display: none; }
       .hero-inner { grid-template-columns: 1fr; min-height: auto; gap: 38px; padding-top: 124px; }
       .hero-panel { max-width: 620px; }
-      .path-grid, .method-grid, .value-grid, .plans { grid-template-columns: 1fr; }
+      .path-grid, .path-grid.two, .method-grid, .value-grid, .plans { grid-template-columns: 1fr; }
       .timeline { grid-template-columns: repeat(3, 1fr); }
       .plan-fit { min-height: auto; }
       .about-grid { grid-template-columns: 1fr; }
@@ -339,6 +340,16 @@
             <div class="path-number">03</div>
             <h3>Você tem informação, mas não sabe o que priorizar</h3>
             <p>Calorias, proteína, exames, suplementos, sono e treino competem pela sua atenção. O trabalho é colocar essas decisões em ordem: o que muda agora, o que pode esperar e qual sinal mostrará se a escolha ajudou.</p>
+          </article>
+        </div>
+        <div class="path-grid two">
+          <article class="path-card">
+            <h3>Também atendo quem</h3>
+            <p>Pratica atividade física e precisa conciliar treino, fome e rotina. Usa GLP-1 e quer acompanhar proteína, treino e composição corporal, com dose e indicação da medicação sob responsabilidade do prescritor. Tem condições metabólicas ou exames e precisa de ordem de prioridade.</p>
+          </article>
+          <article class="path-card">
+            <h3>Para quem não é</h3>
+            <p>Quem procura apenas uma dieta fechada, sem retornos, ou espera promessa de resultado em prazo definido. Diagnóstico, ajuste de medicamento e tratamento fora do escopo nutricional ficam com o profissional responsável.</p>
           </article>
         </div>
         <div class="section-actions">
@@ -446,7 +457,7 @@
             <a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5561995662828?text=Olá%2C%20Rafael.%20Quero%20solicitar%20a%20pré-avaliação%20do%20acompanhamento%20de%2030%20dias.%20Meu%20objetivo%20principal%20é%3A%20">Solicitar pré-avaliação</a>
           </article>
           <article class="plan-card featured">
-            <div class="plan-badge">90 dias · mais indicado</div>
+            <div class="plan-badge">90 dias</div>
             <h3>Testar e ajustar</h3>
             <p class="plan-purpose">Vários ciclos em semanas diferentes</p>
             <div class="plan-fit">Para quem precisa observar a estratégia em contextos variados e corrigir dificuldades como fome, rigidez, rotina instável ou abandono depois dos primeiros dias.</div>
@@ -579,6 +590,12 @@
   <a class="wa-float" target="_blank" rel="noopener" aria-label="Fazer pré-avaliação pelo WhatsApp" href="https://wa.me/5561995662828?text=Olá%2C%20Rafael.%20Quero%20fazer%20a%20pré-avaliação.%0AObjetivo%20principal%3A%20%0APrincipal%20dificuldade%3A%20%0AModalidade%3A%20online%20ou%20presencial.">WA</a>
 
   <script>
+    const params = new URLSearchParams(window.location.search);
+    const origin = params.get("utm_content") || params.get("utm_source") || "direto";
+    document.querySelectorAll('a[href*="wa.me/5561995662828?text="]').forEach((link) => {
+      link.setAttribute("href", link.getAttribute("href") + "%0AOrigem%3A%20" + encodeURIComponent(origin));
+    });
+
     document.querySelectorAll(".faq-question").forEach((button) => {
       button.addEventListener("click", () => {
         const item = button.closest(".faq-item");
