@@ -13,6 +13,7 @@ Versão para revisão em 05/10/2026. Não publicar nem mesclar antes de resolver
 - 30 dias: 2 consultas incluídas, sendo 1 inicial + 1 retorno ao final dos 30 dias, com explicação da reavaliação.
 - 90 dias: 4 consultas incluídas, sendo 1 inicial + 3 retornos. Videochamadas quinzenais removidas como benefício separado, conforme confirmação do responsável.
 - 180 dias: redação provisória “1 consulta inicial + retornos distribuídos ao longo dos 180 dias”. Recursos descritos individualmente, sem remeter genericamente ao formato de 90 dias.
+- Retorno explicitamente apresentado como uma consulta de reavaliação incluída no acompanhamento, conforme confirmação de Rafael.
 - FAQ consistente com os cards, incluindo agendamento, reserva confirmada de 30 dias, modalidades das consultas e direito aos retornos independentemente de aplicação perfeita do plano.
 - Honorários, parcelas e valor da reserva removidos de index.html. Condições apresentadas pelo WhatsApp. Arquivos históricos e sistemas comerciais não foram alterados.
 - 4 UTMs identificadas individualmente na mensagem preparada do WhatsApp. Navegação por âncoras conserva a query da URL; sem UTMs válidas, a mensagem mantém “Origem: direto”. Somente essas 4 chaves são lidas, sem instalar rastreamento nem transmitir dados a plataformas de anúncios.
