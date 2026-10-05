@@ -1,0 +1,38 @@
+[
+  {
+    "width": 360,
+    "passed": true,
+    "headline": "32px",
+    "primaryButtonTop": 588,
+    "photoLoaded": true,
+    "floatVisibleSamples": 12,
+    "consoleErrors": 0
+  },
+  {
+    "width": 390,
+    "passed": true,
+    "headline": "32px",
+    "primaryButtonTop": 527,
+    "photoLoaded": true,
+    "floatVisibleSamples": 9,
+    "consoleErrors": 0
+  },
+  {
+    "width": 430,
+    "passed": true,
+    "headline": "35.26px",
+    "primaryButtonTop": 516,
+    "photoLoaded": true,
+    "floatVisibleSamples": 8,
+    "consoleErrors": 0
+  },
+  {
+    "width": 1440,
+    "passed": true,
+    "headline": "57.6px",
+    "primaryButtonTop": 528,
+    "photoLoaded": true,
+    "floatVisibleSamples": 29,
+    "consoleErrors": 0
+  }
+]
