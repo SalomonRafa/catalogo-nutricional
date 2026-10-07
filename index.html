@@ -363,6 +363,28 @@
       .wa-float { width: 48px; height: 48px; right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); }
       .footer-inner { padding-right: 56px; }
     }
+  
+    /* Leitura: tamanhos maiores, mais contraste e texto alinhado à esquerda */
+    :root { --muted-2: #89aaa8; }
+    .path-card p, .path-card .vs, .method-card p, .value-card p { font-size: 1rem; }
+    .value-card li, .plan-list li { font-size: .96rem; }
+    .timeline-item p { font-size: .98rem; line-height: 1.6; }
+    .plan-fit { font-size: .97rem; }
+    .plan-details dt { font-size: .96rem; }
+    .plan-details dd { font-size: .98rem; }
+    .about-copy p { font-size: 1.04rem; }
+    .principle p { font-size: .95rem; color: var(--muted); }
+    .faq-answer { max-width: 68ch; font-size: 1rem; line-height: 1.75; }
+    .microcopy, .trust-item, .footer-links a { font-size: .92rem; }
+    .compare-table th, .compare-table td { font-size: .97rem; }
+    .compare-table .num-label { font-size: .84rem; }
+    .compare-table .tag { font-size: .78rem; }
+    .plans-note { max-width: 68ch; margin: 20px 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; text-align: left; }
+    .plans-details { margin-top: 20px; }
+    .plans-details > summary { margin: 0 0 26px; }
+    @media (max-width: 620px) {
+      .intro-grid p, .intro-grid a { font-size: .95rem; }
+    }
   </style>
 </head>
 <body>
