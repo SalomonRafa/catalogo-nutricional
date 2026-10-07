@@ -388,7 +388,23 @@
     @media (max-width: 620px) {
       .intro-grid p, .intro-grid a { font-size: .95rem; }
     }
-  </style>
+  
+    @media (max-width: 720px) {
+      .plans-compare { overflow: visible; }
+      .compare-table { min-width: 0; display: block; }
+      .compare-table thead { display: none; }
+      .compare-table tbody, .compare-table tr, .compare-table th, .compare-table td { display: block; width: auto; }
+      .compare-table tbody tr { padding: 16px 0; border-bottom: 1px solid var(--line-strong); }
+      .compare-table tbody tr:last-child { border-bottom: 0; }
+      .compare-table tbody th, .compare-table tr.row-example th { position: static; width: auto; padding: 0 16px 10px; background: transparent; color: var(--aqua); font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; }
+      .compare-table td, .compare-table tr.row-example td { padding: 12px 16px; border-bottom: 0; border-top: 1px solid var(--line); }
+      .compare-table td[data-plan]::before { content: attr(data-plan); display: block; margin-bottom: 6px; color: var(--aqua); font: 700 .74rem "Outfit", sans-serif; text-transform: uppercase; letter-spacing: .07em; }
+      .compare-table tr.row-price td { border-top: 1px solid var(--line); padding-top: 12px; padding-bottom: 12px; }
+      .compare-table .num { display: inline; margin-right: 8px; font-size: 1.5rem; }
+      .compare-table .num-label { display: inline; margin-top: 0; }
+      .compare-table .btn { width: 100%; }
+    }
+</style>
 </head>
 <body>
   <nav aria-label="Navegação principal">
@@ -531,45 +547,45 @@
             <tbody>
               <tr>
                 <th scope="row">Pergunta que resolve</th>
-                <td class="compare-question">Esse plano cabe na minha vida?</td>
-                <td class="compare-question is-featured">Funciona nas semanas difíceis e dá para ver o que mudou?</td>
-                <td class="compare-question">Consigo manter sem depender de acompanhamento?</td>
+                <td data-plan="30 dias" class="compare-question">Esse plano cabe na minha vida?</td>
+                <td data-plan="90 dias" class="compare-question is-featured">Funciona nas semanas difíceis e dá para ver o que mudou?</td>
+                <td data-plan="180 dias" class="compare-question">Consigo manter sem depender de acompanhamento?</td>
               </tr>
               <tr>
                 <th scope="row">Consultas</th>
-                <td><span class="num">2</span><span class="num-label">inicial + 1 retorno</span></td>
-                <td class="is-featured"><span class="num">4</span><span class="num-label">inicial + 3 retornos</span></td>
-                <td><span class="num">6</span><span class="num-label">inicial + 5 retornos</span></td>
+                <td data-plan="30 dias"><span class="num">2</span><span class="num-label">inicial + 1 retorno</span></td>
+                <td data-plan="90 dias" class="is-featured"><span class="num">4</span><span class="num-label">inicial + 3 retornos</span></td>
+                <td data-plan="180 dias"><span class="num">6</span><span class="num-label">inicial + 5 retornos</span></td>
               </tr>
               <tr>
                 <th scope="row">Para quem</th>
-                <td>Quem quer começar e ainda não sabe o que funciona para si</td>
-                <td class="is-featured">Quem tem condição clínica, treina ou vive uma rotina instável</td>
-                <td>Quem quer melhorar a composição corporal com treino, tem condição crônica ou precisa manter o que conquistou</td>
+                <td data-plan="30 dias">Quem quer começar e ainda não sabe o que funciona para si</td>
+                <td data-plan="90 dias" class="is-featured">Quem tem condição clínica, treina ou vive uma rotina instável</td>
+                <td data-plan="180 dias">Quem quer melhorar a composição corporal com treino, tem condição crônica ou precisa manter o que conquistou</td>
               </tr>
               <tr class="row-example">
                 <th scope="row">Exemplo prático</th>
-                <td><span class="tag">Pressão alta</span><span class="ex-text">A pressão pode começar a responder à alimentação em poucas semanas, e dá para conferir no retorno.</span></td>
-                <td class="is-featured"><span class="tag">Colesterol ou diabetes</span><span class="ex-text">O colesterol costuma ser reavaliado em 6 a 12 semanas. A hemoglobina glicada, que reflete 3 meses de glicose, só compara bem depois disso.</span></td>
-                <td><span class="tag">Treino e composição corporal</span><span class="ex-text">Ganhar músculo e perder gordura leva meses, e a balança sozinha pode esconder o que mudou. Seis meses permitem comparar avaliações nas mesmas condições.</span></td>
+                <td data-plan="30 dias"><span class="tag">Pressão alta</span><span class="ex-text">A pressão pode começar a responder à alimentação em poucas semanas, e dá para conferir no retorno.</span></td>
+                <td data-plan="90 dias" class="is-featured"><span class="tag">Colesterol ou diabetes</span><span class="ex-text">O colesterol costuma ser reavaliado em 6 a 12 semanas. A hemoglobina glicada, que reflete 3 meses de glicose, só compara bem depois disso.</span></td>
+                <td data-plan="180 dias"><span class="tag">Treino e composição corporal</span><span class="ex-text">Ganhar músculo e perder gordura leva meses, e a balança sozinha pode esconder o que mudou. Seis meses permitem comparar avaliações nas mesmas condições.</span></td>
               </tr>
               <tr>
                 <th scope="row">Fecha com</th>
-                <td>Reavaliação estruturada no retorno</td>
-                <td class="is-featured">Estratégia revisada a cada retorno</td>
-                <td>Plano de continuidade ao encerramento</td>
+                <td data-plan="30 dias">Reavaliação estruturada no retorno</td>
+                <td data-plan="90 dias" class="is-featured">Estratégia revisada a cada retorno</td>
+                <td data-plan="180 dias">Plano de continuidade ao encerramento</td>
               </tr>
               <tr class="row-price">
                 <th scope="row">Valor</th>
-                <td><span class="price"><small>R$</small>350,00</span><span class="num-label">valor total</span></td>
-                <td class="is-featured"><span class="price"><small>R$</small>840,00</span><span class="num-label">valor total</span></td>
-                <td><span class="price"><small>R$</small>1.400,00</span><span class="num-label">valor total</span></td>
+                <td data-plan="30 dias"><span class="price"><small>R$</small>350,00</span><span class="num-label">valor total</span></td>
+                <td data-plan="90 dias" class="is-featured"><span class="price"><small>R$</small>840,00</span><span class="num-label">valor total</span></td>
+                <td data-plan="180 dias"><span class="price"><small>R$</small>1.400,00</span><span class="num-label">valor total</span></td>
               </tr>
               <tr>
                 <th scope="row"><span class="visually-hidden-label">Contato</span></th>
-                <td><a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5561995662828?text=Ol%C3%A1%2C%20Rafael.%20Quero%20conversar%20sobre%20meu%20acompanhamento%20de%2030%20dias.%0AModalidade%3A%20on-line%20ou%20presencial.">Conversar sobre 30 dias</a></td>
-                <td class="is-featured"><a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5561995662828?text=Ol%C3%A1%2C%20Rafael.%20Quero%20conversar%20sobre%20meu%20acompanhamento%20de%2090%20dias.%0AModalidade%3A%20on-line%20ou%20presencial.">Conversar sobre 90 dias</a></td>
-                <td><a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5561995662828?text=Ol%C3%A1%2C%20Rafael.%20Quero%20conversar%20sobre%20meu%20acompanhamento%20de%20180%20dias.%0AModalidade%3A%20on-line%20ou%20presencial.">Conversar sobre 180 dias</a></td>
+                <td data-plan="30 dias"><a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5561995662828?text=Ol%C3%A1%2C%20Rafael.%20Quero%20conversar%20sobre%20meu%20acompanhamento%20de%2030%20dias.%0AModalidade%3A%20on-line%20ou%20presencial.">Conversar sobre 30 dias</a></td>
+                <td data-plan="90 dias" class="is-featured"><a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5561995662828?text=Ol%C3%A1%2C%20Rafael.%20Quero%20conversar%20sobre%20meu%20acompanhamento%20de%2090%20dias.%0AModalidade%3A%20on-line%20ou%20presencial.">Conversar sobre 90 dias</a></td>
+                <td data-plan="180 dias"><a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5561995662828?text=Ol%C3%A1%2C%20Rafael.%20Quero%20conversar%20sobre%20meu%20acompanhamento%20de%20180%20dias.%0AModalidade%3A%20on-line%20ou%20presencial.">Conversar sobre 180 dias</a></td>
               </tr>
             </tbody>
           </table>
