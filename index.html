@@ -310,6 +310,10 @@
     .plans-details > summary { cursor: pointer; width: fit-content; margin: 0 auto 26px; padding: 10px 18px; border: 1px solid var(--line-strong); border-radius: 999px; color: var(--aqua); font: 700 .88rem "Outfit", sans-serif; list-style: none; }
     .plans-details > summary::-webkit-details-marker { display: none; }
     .plans-details > summary:hover { background: rgba(114, 208, 197, .07); }
+    .path-card .vs { margin-top: 12px; font-size: .92rem; }
+    .path-card .vs strong { display: block; margin-bottom: 2px; color: var(--muted-2); font: 700 .7rem "Outfit", sans-serif; letter-spacing: .07em; text-transform: uppercase; }
+    .path-card .vs.is-you { color: var(--white); }
+    .path-card .vs.is-you strong { color: var(--aqua); }
     .nav-inner { gap: 12px; }
     .nav-links { gap: 0; }
     .nav-links a { padding-inline: 8px; }
@@ -404,7 +408,7 @@
         <details class="professional-details">
           <summary>Conheça minha forma de trabalhar</summary>
           <div class="about-copy">
-            <p>Trabalho com emagrecimento, composição corporal, desempenho esportivo e condições metabólicas, respeitando as necessidades de cada pessoa.</p>
+            <p>Trabalho com emagrecimento, composição corporal, desempenho esportivo e condições clínicas, como diabetes e hipertensão, respeitando as necessidades de cada pessoa.</p>
             <p><strong>Meu papel não é entregar uma dieta perfeita nem tornar você dependente de acompanhamento.</strong> É combinar evidência, experiência clínica e o que você vive entre as consultas para construir decisões cada vez mais precisas.</p>
             <p>Exames, aplicativo e avaliação corporal são recursos complementares. O centro do trabalho é a pessoa: o que ela precisa, o que consegue praticar e o que aprende sobre as próprias escolhas ao longo do processo.</p>
           </div>
@@ -421,29 +425,32 @@
     <section id="necessidades">
       <div class="wrap">
         <div class="eyebrow">Quando o acompanhamento faz diferença</div>
-        <h2 class="section-title">Para cuidar da saúde, do desempenho e da alimentação na sua rotina.</h2>
-        <p class="section-lead">Cada pessoa chega com uma necessidade. Estes são alguns dos contextos que podemos trabalhar juntos.</p>
+        <h2 class="section-title">Um plano você encontra de graça. Ajustá-lo à sua vida é o trabalho.</h2>
+        <p class="section-lead">Hoje um plano alimentar pode ser gerado em segundos, por aplicativos ou ferramentas de IA gratuitas, e para uma dúvida pontual isso pode ajudar. O acompanhamento começa onde o plano pronto termina: no que ele não sabe sobre você e no que acontece quando você tenta cumpri-lo.</p>
         <div class="path-grid">
           <article class="path-card">
             <div class="path-number">01</div>
             <h3>Você já recebeu um plano que não soube adaptar</h3>
-            <p>Viagens, plantões, refeições fora e mudanças no treino pedem opções que caibam na sua rotina.</p>
+            <p class="vs"><strong>Plano pronto</strong>Descreve o que comer na semana ideal. Viagens, plantões, refeições fora e mudanças no treino ficam por sua conta.</p>
+            <p class="vs is-you"><strong>No acompanhamento</strong>Construímos opções que cabem na sua rotina e revisamos quando ela muda.</p>
           </article>
           <article class="path-card">
             <div class="path-number">02</div>
             <h3>Você consegue começar, mas tem dificuldade para retomar</h3>
-            <p>Trabalhamos formas de retomar após dias difíceis, sem compensações extremas nem esperar uma semana perfeita.</p>
+            <p class="vs"><strong>Plano pronto</strong>Não acompanha o que aconteceu depois que você começou.</p>
+            <p class="vs is-you"><strong>No acompanhamento</strong>Identificamos por que deixou de funcionar e como retomar após dias difíceis, sem compensações extremas nem esperar a semana perfeita.</p>
           </article>
           <article class="path-card">
             <div class="path-number">03</div>
             <h3>Você tem informação, mas não sabe o que priorizar</h3>
-            <p>Organizamos prioridades entre alimentação, exames, suplementos e treino, considerando sua saúde e seus objetivos.</p>
+            <p class="vs"><strong>Plano pronto</strong>Responde com base apenas no que você informou, sem saber o que faltou.</p>
+            <p class="vs is-you"><strong>No acompanhamento</strong>Organizo prioridades entre alimentação, exames, suplementos e treino conforme sua saúde e seus objetivos, e assumo a responsabilidade profissional pela conduta.</p>
           </article>
         </div>
         <div class="path-grid two">
           <article class="path-card">
             <h3>Casos que pedem mais critério clínico</h3>
-            <p>Pratica atividade física e precisa conciliar treino, fome e rotina. Usa GLP-1 e quer acompanhar proteína, treino e composição corporal, com dose e indicação da medicação sob responsabilidade do prescritor. Tem condições metabólicas ou exames e precisa de ordem de prioridade.</p>
+            <p>Pratica atividade física e precisa conciliar treino, fome e rotina. Usa GLP-1 e quer acompanhar proteína, treino e composição corporal, com dose e indicação da medicação sob responsabilidade do prescritor. Tem condições clínicas, como diabetes ou hipertensão, ou exames alterados e precisa de ordem de prioridade. Quanto mais complexo o quadro, mais pesa ter um profissional responsável pela conduta.</p>
           </article>
           <article class="path-card">
             <h3>Para quem não é</h3>
@@ -459,8 +466,8 @@
     <section class="bg-2" id="metodo">
       <div class="wrap">
         <div class="eyebrow">Como o acompanhamento acontece</div>
-        <h2 class="section-title">Um ponto de partida, com espaço para ajustar.</h2>
-        <p class="section-lead">A estratégia combina evidências científicas, avaliação clínica e suas preferências. Você entende o motivo das escolhas e o que vamos observar ao longo do acompanhamento.</p>
+        <h2 class="section-title">Ciência como base. Bom senso para aplicar na sua vida.</h2>
+        <p class="section-lead">Cada conduta parte da melhor evidência disponível, que é a forma de comunicar onde a ciência está hoje. Ela só vira prática quando considera suas preferências e o que você consegue sustentar na rotina. Por isso você entende o motivo de cada escolha e o que vamos observar para saber se está funcionando.</p>
         <div class="timeline">
           <article class="timeline-item"><h3>Consulta inicial</h3><p>Antes da consulta, você preenche cadastro e questionários. Na conversa, avaliamos sua história, saúde, objetivos e rotina para definir a primeira estratégia.</p></article>
           <article class="timeline-item"><h3>Aplicação na rotina</h3><p>Você coloca o plano em prática e observa como ele funciona com sua fome, refeições fora, viagens e mudanças no treino.</p></article>
