@@ -294,6 +294,22 @@
     .plan-details div { padding: 10px 0; border-bottom: 1px solid var(--line); }
     .plan-details dt { font: 700 .9rem "Outfit", sans-serif; margin-bottom: 4px; }
     .plan-details dd { color: var(--muted); font-size: .9rem; }
+
+    .visually-hidden-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .plans-compare { overflow-x: auto; margin-bottom: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+    .compare-table { width: 100%; min-width: 680px; border-collapse: collapse; text-align: left; }
+    .compare-table th, .compare-table td { padding: 16px 18px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--muted); font-size: .92rem; line-height: 1.5; }
+    .compare-table thead th { color: var(--white); font: 800 1.05rem/1.25 "Outfit", sans-serif; vertical-align: bottom; }
+    .compare-table thead th span { display: block; margin-bottom: 4px; color: var(--aqua); font: 700 .7rem "Outfit", sans-serif; text-transform: uppercase; letter-spacing: .07em; }
+    .compare-table thead th span.visually-hidden-label { position: absolute; }
+    .compare-table tbody th { width: 17%; color: var(--white); font: 700 .86rem "Outfit", sans-serif; }
+    .compare-table .compare-question { color: var(--white); font-weight: 700; }
+    .compare-table .is-featured { background: rgba(114, 208, 197, .06); }
+    .compare-table tbody tr:last-child th, .compare-table tbody tr:last-child td { border-bottom: 0; }
+    .compare-table .btn { width: 100%; min-height: 40px; padding: 9px 12px; font-size: .82rem; text-align: center; }
+    .plans-details > summary { cursor: pointer; width: fit-content; margin: 0 auto 26px; padding: 10px 18px; border: 1px solid var(--line-strong); border-radius: 999px; color: var(--aqua); font: 700 .88rem "Outfit", sans-serif; list-style: none; }
+    .plans-details > summary::-webkit-details-marker { display: none; }
+    .plans-details > summary:hover { background: rgba(114, 208, 197, .07); }
     .nav-inner { gap: 12px; }
     .nav-links { gap: 0; }
     .nav-links a { padding-inline: 8px; }
@@ -359,7 +375,7 @@
         <div>
           <div class="eyebrow">Acompanhamento nutricional clínico e esportivo</div>
           <h1 class="hero-title">Um plano que só funciona na semana perfeita <span class="aqua">não é um bom plano.</span></h1>
-          <p class="hero-copy">Seu plano começa pela sua história, seus objetivos e sua rotina. No acompanhamento, definimos uma estratégia e revisamos o que precisa mudar conforme você a coloca em prática.</p>
+          <p class="hero-copy">Um plano pronto diz o que comer. O acompanhamento descobre por que ele não está funcionando para você e corrige. A estratégia começa pela sua história, seus objetivos e sua rotina, e é revisada conforme você a coloca em prática.</p>
 <p class="location-note">Presencial em Brasília e on-line em todo o Brasil.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5561995662828?text=Ol%C3%A1%2C%20Rafael.%20Quero%20conversar%20sobre%20meu%20acompanhamento.%0AModalidade%3A%20on-line%20ou%20presencial.">Conversar sobre meu acompanhamento</a>
@@ -393,10 +409,10 @@
             <p>Exames, aplicativo e avaliação corporal são recursos complementares. O centro do trabalho é a pessoa: o que ela precisa, o que consegue praticar e o que aprende sobre as próprias escolhas ao longo do processo.</p>
           </div>
           <div class="principles">
-            <article class="principle"><h3>Escuta antes da prescrição</h3><p>A conduta começa pelo seu contexto, não por um protocolo escolhido com antecedência.</p></article>
-            <article class="principle"><h3>Decisão explicada</h3><p>Você sabe o que estamos tentando modificar, por que começamos ali e como vamos avaliar.</p></article>
-            <article class="principle"><h3>Ajuste sem culpa</h3><p>Uma dificuldade serve para compreender e corrigir a estratégia, não para julgar seu esforço.</p></article>
-            <article class="principle"><h3>Limites profissionais</h3><p>Quando a necessidade ultrapassa a nutrição, o caso é encaminhado ao profissional adequado.</p></article>
+            <article class="principle"><h3>Perguntas antes do plano</h3><p>Mapeio sua história, rotina, fome, treino e o que já foi tentado. A conduta parte disso, não de um protocolo escolhido com antecedência.</p></article>
+            <article class="principle"><h3>Cada decisão tem motivo e critério</h3><p>Você sabe o que estamos tentando modificar, por que começamos ali e qual sinal vamos usar para avaliar.</p></article>
+            <article class="principle"><h3>Dificuldade é dado, não julgamento</h3><p>Quando algo não funciona, identifico se foi uma situação pontual, uma regra pouco clara ou uma escolha incompatível com a sua rotina, e corrijo a estratégia.</p></article>
+            <article class="principle"><h3>Conduta com responsável</h3><p>A conduta nutricional é de minha responsabilidade profissional. Quando a necessidade ultrapassa a nutrição, o caso é encaminhado ao profissional adequado.</p></article>
           </div>
         </details>
       </div>
@@ -426,7 +442,7 @@
         </div>
         <div class="path-grid two">
           <article class="path-card">
-            <h3>Também atendo quem</h3>
+            <h3>Casos que pedem mais critério clínico</h3>
             <p>Pratica atividade física e precisa conciliar treino, fome e rotina. Usa GLP-1 e quer acompanhar proteína, treino e composição corporal, com dose e indicação da medicação sob responsabilidade do prescritor. Tem condições metabólicas ou exames e precisa de ordem de prioridade.</p>
           </article>
           <article class="path-card">
@@ -448,7 +464,7 @@
         <div class="timeline">
           <article class="timeline-item"><h3>Consulta inicial</h3><p>Antes da consulta, você preenche cadastro e questionários. Na conversa, avaliamos sua história, saúde, objetivos e rotina para definir a primeira estratégia.</p></article>
           <article class="timeline-item"><h3>Aplicação na rotina</h3><p>Você coloca o plano em prática e observa como ele funciona com sua fome, refeições fora, viagens e mudanças no treino.</p></article>
-          <article class="timeline-item"><h3>Retorno</h3><p>O retorno é uma consulta completa, assim como a inicial. Sua história e seus dados já estão registrados. Avaliamos sua evolução e as dificuldades. Mantemos o que funciona e ajustamos o plano quando algum obstáculo atrapalha seus objetivos.</p></article>
+          <article class="timeline-item"><h3>Retorno</h3><p>Consulta completa, como a inicial. Avaliamos sua evolução e, quando algo não funcionou, identificamos o motivo: uma situação pontual, uma regra pouco clara ou uma escolha incompatível com a sua rotina. Mantemos o que funciona e corrigimos o que não funciona.</p></article>
           <article class="timeline-item"><h3>Ajustes</h3><p>Mantemos o que funciona e revisamos porções, substituições ou organização das refeições conforme a necessidade.</p></article>
         </div>
       </div>
@@ -459,6 +475,58 @@
         <div class="eyebrow">Acompanhamentos</div>
         <h2 class="section-title">Acompanhamentos de 30, 90 e 180 dias.</h2>
         <p class="section-lead">Escolhemos a duração conforme sua necessidade e o tempo para acompanhar sua evolução.</p>
+        <div class="plans-compare" role="region" aria-label="Comparação dos acompanhamentos de 30, 90 e 180 dias" tabindex="0">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col"><span class="visually-hidden-label">Critério</span></th>
+                <th scope="col"><span>30 dias</span>Começar com foco</th>
+                <th scope="col" class="is-featured"><span>90 dias</span>Testar e ajustar</th>
+                <th scope="col"><span>180 dias</span>Consolidar e preparar autonomia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Pergunta que resolve</th>
+                <td class="compare-question">Isso funciona para mim?</td>
+                <td class="compare-question is-featured">Funciona fora da semana ideal?</td>
+                <td class="compare-question">Consigo manter sem depender?</td>
+              </tr>
+              <tr>
+                <th scope="row">Consultas</th>
+                <td>2: inicial + 1 retorno</td>
+                <td class="is-featured">4: inicial + 3 retornos</td>
+                <td>6: inicial + 5 retornos</td>
+              </tr>
+              <tr>
+                <th scope="row">O que observamos</th>
+                <td>Um primeiro ciclo completo</td>
+                <td class="is-featured">Contextos variados: fome, rigidez, rotina instável</td>
+                <td>Fases distintas: redução de gordura, estabilização e manutenção</td>
+              </tr>
+              <tr>
+                <th scope="row">Fecha com</th>
+                <td>Reavaliação estruturada no retorno</td>
+                <td class="is-featured">Estratégia revisada a cada retorno</td>
+                <td>Plano de continuidade ao encerramento</td>
+              </tr>
+              <tr>
+                <th scope="row">Indicado para</th>
+                <td>Demanda delimitada</td>
+                <td class="is-featured">Rotina instável ou abandono depois dos primeiros dias</td>
+                <td>Reganho recorrente ou mudança clínica mais lenta</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="visually-hidden-label">Contato</span></th>
+                <td><a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5561995662828?text=Ol%C3%A1%2C%20Rafael.%20Quero%20conversar%20sobre%20meu%20acompanhamento%20de%2030%20dias.%0AModalidade%3A%20on-line%20ou%20presencial.">Conversar sobre 30 dias</a></td>
+                <td class="is-featured"><a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5561995662828?text=Ol%C3%A1%2C%20Rafael.%20Quero%20conversar%20sobre%20meu%20acompanhamento%20de%2090%20dias.%0AModalidade%3A%20on-line%20ou%20presencial.">Conversar sobre 90 dias</a></td>
+                <td><a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5561995662828?text=Ol%C3%A1%2C%20Rafael.%20Quero%20conversar%20sobre%20meu%20acompanhamento%20de%20180%20dias.%0AModalidade%3A%20on-line%20ou%20presencial.">Conversar sobre 180 dias</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <details class="plans-details">
+        <summary>Ver detalhes de cada acompanhamento</summary>
         <div class="plans">
           <article class="plan-card">
             <div class="plan-badge">30 dias</div>
@@ -471,7 +539,7 @@
               <div><dt>Modalidade</dt><dd>On-line ou presencial, conforme a modalidade contratada.</dd></div>
               <div><dt>Agendamento do retorno</dt><dd>O retorno está incluído no acompanhamento e é agendado para o final dos 30 dias.</dd></div>
               <div><dt>No retorno</dt><dd>Revisamos seus objetivos, avaliamos sua evolução e reavaliamos a composição corporal quando essa avaliação for aplicável ao atendimento.</dd></div>
-              <div><dt>Recursos</dt><dd>Plano alimentar personalizado no aplicativo, avaliação de composição corporal quando indicada e exames considerados como informação complementar.</dd></div>
+              <div><dt>Recursos</dt><dd>Avaliação de composição corporal quando indicada, exames considerados como informação complementar e plano alimentar personalizado no aplicativo.</dd></div>
               <div><dt>Suporte</dt><dd>Dúvidas sobre horários, porções e substituições, dentro dos horários e limites definidos em contrato.</dd></div>
             </dl>
 
@@ -487,7 +555,7 @@
               <div><dt>Consultas incluídas</dt><dd>4 consultas incluídas: 1 consulta inicial + 3 retornos ao longo dos 90 dias.</dd></div>
               <div><dt>Modalidade</dt><dd>On-line ou presencial, conforme a modalidade contratada.</dd></div>
               <div><dt>Agendamento dos retornos</dt><dd>Os retornos são agendados durante o acompanhamento, considerando sua disponibilidade e as necessidades de revisão do plano.</dd></div>
-              <div><dt>Recursos</dt><dd>Plano alimentar no aplicativo e atualizações; composição corporal comparativa quando indicada; exames como apoio quando pertinentes; material educativo personalizado quando necessário.</dd></div>
+              <div><dt>Recursos</dt><dd>Composição corporal comparativa quando indicada; exames como apoio quando pertinentes; material educativo personalizado quando necessário; plano alimentar no aplicativo e atualizações.</dd></div>
               <div><dt>Suporte</dt><dd>Durante os 90 dias, dentro dos horários e limites definidos em contrato.</dd></div>
             </dl>
 
@@ -503,14 +571,16 @@
               <div><dt>Consultas incluídas</dt><dd>6 consultas incluídas: 1 consulta inicial + 5 retornos ao longo dos 180 dias.</dd></div>
               <div><dt>Modalidade</dt><dd>On-line ou presencial, conforme a modalidade contratada.</dd></div>
               <div><dt>Agendamento dos retornos</dt><dd>Os retornos são agendados durante o acompanhamento, considerando sua disponibilidade e as necessidades de revisão do plano.</dd></div>
-              <div><dt>Recursos</dt><dd>Plano alimentar no aplicativo com atualizações mensais; histórico evolutivo de composição corporal; revisão de exames e suplementação quando pertinente; plano de continuidade ao encerramento.</dd></div>
+              <div><dt>Recursos</dt><dd>Plano de continuidade ao encerramento; histórico evolutivo de composição corporal; revisão de exames e suplementação quando pertinente; plano alimentar no aplicativo com atualizações mensais.</dd></div>
               <div><dt>Suporte</dt><dd>Durante os 180 dias, dentro dos horários e limites definidos em contrato.</dd></div>
             </dl>
 
             <a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/5561995662828?text=Ol%C3%A1%2C%20Rafael.%20Quero%20conversar%20sobre%20meu%20acompanhamento%20de%20180%20dias.%0AModalidade%3A%20on-line%20ou%20presencial.">Conversar sobre meu acompanhamento</a>
           </article>
         </div>
-        <p class="plans-note">Cada retorno é uma consulta completa, com o mesmo cuidado e avaliação da inicial. Partimos da sua história e dos dados já registrados para avaliar sua evolução e as dificuldades. Se a estratégia estiver funcionando, mantemos. Se houver obstáculos que atrapalhem seus objetivos, ajustamos o plano conforme a necessidade. Os retornos incluídos não dependem de seguir o plano perfeitamente; as dificuldades de aplicação também são trabalhadas nessas consultas.</p>
+        </details>
+        <p class="plans-note">Cada retorno é uma consulta completa e não depende de você ter seguido o plano perfeitamente. As dificuldades de aplicação são parte do que trabalhamos.</p>
+        <p class="plans-note">O suporte pelo WhatsApp existe para decisões que dependem do seu caso, como ajustar, substituir ou reorganizar, dentro dos horários e limites definidos em contrato.</p>
         <p class="plans-note">Valores e condições de contratação são apresentados na conversa pelo WhatsApp.</p>
         <p class="plans-note">Conversamos sobre suas necessidades e o tempo para acompanhá-las. Se um ciclo de 30 dias for suficiente, não indico 90. Quando a necessidade ultrapassa a atuação nutricional, explico o limite e oriento a busca pelo profissional adequado.</p>
       </div>
