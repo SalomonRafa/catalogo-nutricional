@@ -310,6 +310,9 @@
     .compare-table .num-label { display: block; margin-top: 5px; color: var(--muted-2); font-size: .78rem; }
     .compare-table .tag { display: inline-block; margin-bottom: 8px; padding: 3px 11px; border: 1px solid var(--line-strong); border-radius: 999px; color: var(--aqua); font: 700 .74rem "Outfit", sans-serif; letter-spacing: .03em; }
     .compare-table .ex-text { display: block; }
+    .compare-table .price { display: block; color: var(--white); font: 800 1.7rem/1 "Outfit", sans-serif; letter-spacing: -.02em; white-space: nowrap; }
+    .compare-table .price small { margin-right: 6px; color: var(--aqua); font: 700 .85rem "Outfit", sans-serif; letter-spacing: 0; }
+    .compare-table tr.row-price td { padding-top: 20px; padding-bottom: 20px; border-top: 1px solid var(--line-strong); }
     .compare-table tr.row-example td { background: rgba(114, 208, 197, .035); padding-top: 20px; padding-bottom: 20px; }
     .compare-table tr.row-example th { background: #0c2125; }
     .compare-table tr.row-example td.is-featured { background: rgba(114, 208, 197, .09); }
@@ -555,6 +558,12 @@
                 <td>Reavaliação estruturada no retorno</td>
                 <td class="is-featured">Estratégia revisada a cada retorno</td>
                 <td>Plano de continuidade ao encerramento</td>
+              </tr>
+              <tr class="row-price">
+                <th scope="row">Valor</th>
+                <td><span class="price"><small>R$</small>350,00</span><span class="num-label">valor total</span></td>
+                <td class="is-featured"><span class="price"><small>R$</small>840,00</span><span class="num-label">valor total</span></td>
+                <td><span class="price"><small>R$</small>1.400,00</span><span class="num-label">valor total</span></td>
               </tr>
               <tr>
                 <th scope="row"><span class="visually-hidden-label">Contato</span></th>
