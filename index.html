@@ -296,13 +296,23 @@
     .plan-details dd { color: var(--muted); font-size: .9rem; }
 
     .visually-hidden-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-    .plans-compare { overflow-x: auto; margin-bottom: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+    .plans-compare { overflow-x: auto; margin-bottom: 22px; border: 1px solid var(--line); border-radius: var(--radius); background-color: var(--surface);
+      background-image: linear-gradient(to right, var(--surface) 30%, rgba(10, 27, 29, 0)), linear-gradient(to left, var(--surface) 30%, rgba(10, 27, 29, 0)), radial-gradient(farthest-side at 0 50%, rgba(114, 208, 197, .28), rgba(114, 208, 197, 0)), radial-gradient(farthest-side at 100% 50%, rgba(114, 208, 197, .28), rgba(114, 208, 197, 0));
+      background-position: left center, right center, left center, right center; background-repeat: no-repeat; background-size: 44px 100%, 44px 100%, 14px 100%, 14px 100%; background-attachment: local, local, scroll, scroll; }
     .compare-table { width: 100%; min-width: 680px; border-collapse: collapse; text-align: left; }
     .compare-table th, .compare-table td { padding: 16px 18px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--muted); font-size: .92rem; line-height: 1.5; }
     .compare-table thead th { color: var(--white); font: 800 1.05rem/1.25 "Outfit", sans-serif; vertical-align: bottom; }
     .compare-table thead th span { display: block; margin-bottom: 4px; color: var(--aqua); font: 700 .7rem "Outfit", sans-serif; text-transform: uppercase; letter-spacing: .07em; }
     .compare-table thead th span.visually-hidden-label { position: absolute; }
-    .compare-table tbody th { width: 17%; color: var(--white); font: 700 .86rem "Outfit", sans-serif; }
+    .compare-table tbody th { width: 17%; color: var(--white); font: 700 .86rem "Outfit", sans-serif; position: sticky; left: 0; z-index: 1; background: var(--surface); }
+    .compare-table thead th:first-child { position: sticky; left: 0; z-index: 1; background: var(--surface); }
+    .compare-table .num { display: block; color: var(--aqua); font: 800 1.9rem/1 "Outfit", sans-serif; }
+    .compare-table .num-label { display: block; margin-top: 5px; color: var(--muted-2); font-size: .78rem; }
+    .compare-table .tag { display: inline-block; margin-bottom: 8px; padding: 3px 11px; border: 1px solid var(--line-strong); border-radius: 999px; color: var(--aqua); font: 700 .74rem "Outfit", sans-serif; letter-spacing: .03em; }
+    .compare-table .ex-text { display: block; }
+    .compare-table tr.row-example td { background: rgba(114, 208, 197, .035); padding-top: 20px; padding-bottom: 20px; }
+    .compare-table tr.row-example th { background: #0c2125; }
+    .compare-table tr.row-example td.is-featured { background: rgba(114, 208, 197, .09); }
     .compare-table .compare-question { color: var(--white); font-weight: 700; }
     .compare-table .is-featured { background: rgba(114, 208, 197, .06); }
     .compare-table td strong { color: var(--white); font-weight: 700; }
@@ -502,9 +512,9 @@
               </tr>
               <tr>
                 <th scope="row">Consultas</th>
-                <td>2: inicial + 1 retorno</td>
-                <td class="is-featured">4: inicial + 3 retornos</td>
-                <td>6: inicial + 5 retornos</td>
+                <td><span class="num">2</span><span class="num-label">inicial + 1 retorno</span></td>
+                <td class="is-featured"><span class="num">4</span><span class="num-label">inicial + 3 retornos</span></td>
+                <td><span class="num">6</span><span class="num-label">inicial + 5 retornos</span></td>
               </tr>
               <tr>
                 <th scope="row">Para quem</th>
@@ -512,11 +522,11 @@
                 <td class="is-featured">Quem tem condição clínica, treina ou vive uma rotina instável</td>
                 <td>Quem quer melhorar a composição corporal com treino, tem condição crônica ou precisa manter o que conquistou</td>
               </tr>
-              <tr>
+              <tr class="row-example">
                 <th scope="row">Exemplo prático</th>
-                <td><strong>Pressão alta:</strong> a pressão pode começar a responder à alimentação em poucas semanas, e dá para conferir no retorno.</td>
-                <td class="is-featured"><strong>Colesterol ou diabetes:</strong> o colesterol costuma ser reavaliado em exame após 6 a 12 semanas. A hemoglobina glicada, que mostra a média da glicose de cerca de 3 meses, só permite comparação depois desse tempo.</td>
-                <td><strong>Treino e composição corporal:</strong> ganhar músculo e perder gordura leva meses, e o peso da balança sozinho pode esconder o que mudou. Seis meses permitem comparar avaliações feitas nas mesmas condições e ver a tendência.</td>
+                <td><span class="tag">Pressão alta</span><span class="ex-text">A pressão pode começar a responder à alimentação em poucas semanas, e dá para conferir no retorno.</span></td>
+                <td class="is-featured"><span class="tag">Colesterol ou diabetes</span><span class="ex-text">O colesterol costuma ser reavaliado em 6 a 12 semanas. A hemoglobina glicada, que reflete 3 meses de glicose, só compara bem depois disso.</span></td>
+                <td><span class="tag">Treino e composição corporal</span><span class="ex-text">Ganhar músculo e perder gordura leva meses, e a balança sozinha pode esconder o que mudou. Seis meses permitem comparar avaliações nas mesmas condições.</span></td>
               </tr>
               <tr>
                 <th scope="row">Fecha com</th>
